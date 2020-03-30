@@ -1,0 +1,112 @@
+@keyframes anim-about
+	from
+		// -webkit-transform: translate3d(0, -100%, 0)
+		// transform: translate3d(0, -100%, 0)
+		height: 0vh
+	to
+		// -webkit-transform: translate3d(0, 0, 0)
+		// transform: translate3d(0, 0, 0)
+		height: 100.1vh
+.anim1
+	animation: anim-about
+.anim2
+	animation: anim-about
+.anim3
+	animation: anim-about
+.anim4
+	animation: anim-about
+@keyframes matr
+	from
+		opacity: 1
+		// transform: skewY(-55deg) translateY(0)
+	to
+		opacity: 0
+		// transform: skewY(-55deg) translateY(-100px)
+.matr1
+	position: relative
+@keyframes trfX
+	from
+		left: -100%
+	to
+		left: 0
+.trfX
+	animation: trfX
+@keyframes trfX2
+	from
+		opacity: 0
+		transform: translateX(-100%)
+	to
+		opacity: 1
+		transform: translateX(0%)
+.trfX2
+	animation: trfX2
+@keyframes trfX3
+	from
+		opacity: 0
+		transform: translateX(100%)
+	to
+		opacity: 0.5
+		transform: translateX(0%)
+.trfX3
+	animation: trfX3
+@keyframes trfY
+	from
+		top: -100%
+	to
+		top: 50%
+.trfY
+	animation: trfY
+@keyframes anim-text
+	from
+		font-size: 500px
+		transform: scale(1)
+		z-index: 100
+	to
+		font-size: 10000px
+		transform: scale(2)
+		z-index: -1
+
+.text-a
+	animation-name: anim-text
+	animation-fill-mode: forwards
+.arrow-1.finished
+	animation: arrow 1s infinite !important
+.arrow-2.finished
+	animation: arrow 1s infinite 0.1s !important
+.arrow-3.finished
+	animation: arrow 1s infinite 0.2s !important
+@keyframes arrow
+	from
+		opacity: 0
+	to
+		opacity: 1
+
+@media (max-width: 768px)
+	.fadeIn,.fadeInUp,.fadeInUpBig,.text-a,.trfX,.trfX2,.trfX3,.trfY,.fadeInUpSmall
+		animation: none !important
+// glitch
+.glitch
+	position: absolute
+@keyframes cross
+	90%
+		width: 100%
+	100%
+		width: 0%
+.transition-anim
+	position: relative
+	overflow: hidden
+	&::before
+		position: fixed
+		content: ''
+		width: 100%
+		height: 100vh
+		background-color: $c-bg-black
+		z-index: 998
+		left: 101%
+		transition: 1.5s
+		// background: $c-bg-black url(/img/6mb.gif) center/cover no-repeat
+html.is-animating .transition-anim::before
+	left: 0%
+.svg-test path
+	stroke-dashoffset: 0
+	fill: transparent

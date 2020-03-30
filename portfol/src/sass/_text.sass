@@ -1,0 +1,156 @@
+.section-title
+	@include mons_600
+	font-size: 21px
+	line-height: 26px
+	letter-spacing: 0.03em
+	text-transform: uppercase
+	color: #BDBDBD
+.description
+	@include mons_300
+	font-size: 14px
+	line-height: 160%
+	color: rgba(255, 255, 255, 0.6)
+.price
+	font-family: Roboto Condensed
+	font-style: normal
+	font-weight: 300
+	font-size: 27px
+	line-height: 32px
+	letter-spacing: 0.03em
+	color: rgba(#fff,.6)
+.section
+	&-h1
+		font-family: Montserrat
+		font-style: normal
+		font-weight: bold
+		font-size: 100px
+		line-height: 120px
+		letter-spacing: 0.03em
+		text-transform: uppercase
+		color: #F2F2F2
+	&-h3
+		font-family: Roboto Condensed
+		font-style: normal
+		font-weight: 300
+		font-size: 12px
+		line-height: 14px
+		letter-spacing: 0.17em
+		text-transform: uppercase
+		color: #FFFFFF
+	&-h2
+		@include mons_600
+		font-size: 18px
+		line-height: 22px
+		letter-spacing: 0.03em
+		text-transform: uppercase
+		color: #F2F2F2
+// link
+.link-d
+	font-family: Roboto Condensed
+	font-style: normal
+	font-weight: normal
+	font-size: 12px
+	line-height: 14px
+	letter-spacing: 0.17em
+	text-decoration-line: underline
+	text-transform: uppercase
+	color: #FFFFFF
+.link
+	&-case
+		font-family: Roboto Condensed
+		font-style: normal
+		font-weight: bold
+		font-size: 18px
+		text-decoration: none
+		line-height: 21px
+		letter-spacing: 0.665em
+		text-transform: uppercase
+		// border: 2px solid #fff
+		color: #F2F2F2
+		white-space: nowrap
+		padding: 25px
+		position: relative
+		z-index: 10
+		.le-t
+			position: absolute
+			top: 0
+			left: 0
+			&::before
+				content: ''
+				top: 0
+				left: 0
+				position: absolute
+				background-color: #fff
+				width: 30px
+				height: 1px
+			&::after
+				content: ''
+				top: 0
+				left: 0
+				position: absolute
+				background-color: #fff
+				width: 1px
+				height: 20px
+		.le-b
+			position: absolute
+			bottom: 0
+			left: 0
+			z-index: 10
+			&::before
+				content: ''
+				bottom: 0
+				left: 0
+				position: absolute
+				background-color: #fff
+				width: 30px
+				height: 1px
+			&::after
+				content: ''
+				bottom: 0
+				left: 0
+				position: absolute
+				background-color: #fff
+				width: 1px
+				height: 20px
+		.ri-t
+			position: absolute
+			top: 0
+			right: 0
+			z-index: 10
+			&::before
+				content: ''
+				top: 0
+				right: 0
+				position: absolute
+				background-color: #fff
+				width: 30px
+				height: 1px
+			&::after
+				content: ''
+				top: 0
+				right: 0
+				position: absolute
+				background-color: #fff
+				width: 1px
+				height: 20px
+		.ri-b
+			position: absolute
+			bottom: 0
+			right: 0
+			z-index: 10
+			&::before
+				content: ''
+				bottom: 0
+				right: 0
+				position: absolute
+				background-color: #fff
+				width: 30px
+				height: 1px
+			&::after
+				content: ''
+				bottom: 0
+				right: 0
+				position: absolute
+				background-color: #fff
+				width: 1px
+				height: 20px

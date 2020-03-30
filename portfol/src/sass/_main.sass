@@ -1,0 +1,60 @@
+.main
+	background: url(/img/jpg/main.jpg) center/cover no-repeat
+	height: 100.1vh
+	&-img
+		width: 30%
+		z-index: 1
+		position: absolute
+		left: 50%
+		top: 30%
+		-webkit-transform: translate(-50%,-50%)
+		transform: translate(-50%,-50%)
+	.main__text
+		position: relative
+		z-index: 10
+		top: 15%
+		left: 5%
+	.desc
+		font-family: Montserrat
+		font-style: normal
+		font-weight: 300
+		font-size: 14px
+		line-height: 160%
+		color: #FFFFFF
+	.text
+		margin-top: 20px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		p
+			&:not(:last-of-type)
+				margin-right: 20px
+	.main__skills
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		list-style-type: none
+		position: absolute
+		z-index: 11
+		left: 50%
+		transform: translateX(-50%)
+		bottom: 20px
+		li
+			opacity: 0.5
+			transition: .5s
+			cursor: pointer
+			&:not(:last-of-type)
+				margin-right: 17px
+			img
+				width: 39px
+				height: 39px
+		li:hover
+			opacity: 1
+			transform: scale(1.2) translateY(-2px)
+			
+
+		

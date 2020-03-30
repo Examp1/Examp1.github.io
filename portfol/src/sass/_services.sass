@@ -1,0 +1,119 @@
+.services
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	background: $g-pink
+	overflow-y: hidden
+	position: relative
+	&__ul
+		position: relative
+		z-index: 101
+	.arrow
+		position: absolute
+		right: -110px
+		top: 70%
+		-webkit-transform: translateY(-50%)
+		transform: translateY(-50%)
+	.col-left,.col-right
+		width: 50%
+		height: 100%
+		position: relative
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+		align-content: center
+		flex-direction: column
+		img
+			width: 100%
+			position: absolute
+			z-index: 1
+			height: 100%
+		.bg-mask
+			position: absolute
+			background: $g-pink
+			width: 100%
+			height: 100vh
+			z-index: 10
+			left: 0
+		.col-inner
+			width: 80%
+			margin: 0 auto
+			ul
+				list-style-type: none
+				li
+					margin-top: 25px
+					// max-width: 380px
+					h2
+						margin-bottom: 5px
+					.description
+						position: relative
+						z-index: 110
+	.elips-img
+		z-index: 100
+		position: absolute
+		@include t50
+		left: 0
+	.want
+		position: absolute
+		left: 150px
+		bottom: 55px
+		z-index: 101
+		font-size: 50px
+		text-decoration: none
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		span
+			color: #fff	
+			margin-right: 0
+			@include mons_600
+			font-size: 59px
+			line-height: 63px
+			letter-spacing: 0.03em
+			&:nth-child(4)
+				margin-right: 20px
+.arrow
+	list-style-type: none
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: flex-end
+	li
+		margin-right: -10px
+.x-mark-wrap
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	height: 100%
+	overflow: hidden
+.x-mark2
+	width: 100vw !important
+	height: 100vh !important
+	position: absolute
+	top: 0%
+	z-index: 100
+	// background: url(/img/svg/х-mark-full.svg) center/cover no-repeat
+	mask-image: url(/img/svg/х-mark-full.svg) 
+	background-color: #833882
+	-webkit-mask-size: 100%
+	@include l50
+.x-mark3
+	width: 100vw !important
+	height: 100vh !important
+	position: absolute
+	z-index: 1
+	right: -52%
+	mask-image: url(/img/svg/х-mark-half.svg) 
+	background-color: #833882
+	-webkit-mask-size: 50%

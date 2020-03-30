@@ -1,0 +1,156 @@
+.contact
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	justify-content: center
+	&-title
+		background: url(/img/jpg/contactBg.jpg) center/cover no-repeat
+		-webkit-background-clip: text
+		font-size: 22vw
+		color: transparent
+		@include mons_700
+		text-align: center
+	.text
+		.desc
+			padding-left: 15%
+			@include mons_600
+			font-size: 32px
+			line-height: 39px
+			color: $c-bg-black
+	&_form
+		margin: 0 auto
+		width: 85%
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+		.desc
+			padding-left: 15%
+			@include mons_600
+			font-size: 32px
+			line-height: 39px
+			color: $c-bg-black
+		form
+			padding-left: 15%
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: column
+			input
+				background-color: #f8f8ff
+				border: none
+				width: 100%
+				padding: 19px 10px 19px 23px
+				@include mons_500
+				&[type="submit"]
+					background: $g-pink
+					color: #fff
+					max-width: 209px
+					font-family: Roboto Condensed
+					font-style: normal
+					font-weight: normal
+					font-size: 11px
+					line-height: 13px
+					letter-spacing: 0.17em
+					text-transform: uppercase
+					margin-top: 12px
+					cursor: pointer
+		.col-right
+			text-align: right
+			.section-h3
+				font-family: Roboto Condensed
+				font-style: normal
+				font-weight: normal
+				font-size: 12px
+				line-height: 14px
+				text-align: right
+				letter-spacing: 0.17em
+				text-transform: uppercase
+				color: #14141C
+			ul
+				list-style-type: none
+			.list
+				margin-bottom: 55px
+				a
+					position: relative
+					text-decoration: none
+					&::before
+						content: ''
+						position: absolute
+						bottom: -2px
+						left: 0
+						width: 100%
+						height: 1px
+						transition: .5s
+				&-1
+					li
+						margin-bottom: 25px
+						&:first-of-type
+							margin-top: 22px
+					a
+						color: #E83CBB
+						font-size: 14px
+						line-height: 17px
+						@include mons_500
+						&::before
+							background-color: #E83CBB
+						&:hover
+							&::before
+								width: 0%
+				&-2
+					p
+						@include mons_500			
+						color: rgba(20, 20, 28, 0.4)
+						font-size: 14px
+						line-height: 17px
+						margin-top: 22px
+						span
+							color: #E83CBB
+							font-weight: 600
+				&-3
+					ul
+						display: -webkit-flex
+						display: -moz-flex
+						display: -ms-flex
+						display: -o-flex
+						display: flex
+						justify-content: flex-end
+						margin-top: 22px
+						li
+							&:not(:last-of-type)
+								margin-right: 20px
+							a
+								@include mons_500
+								font-size: 14px
+								text-decoration: none
+								line-height: 17px
+								color: rgba(20, 20, 28, 0.4)
+								&::before
+									background-color: rgba(20, 20, 28, 0.4)
+									width: 0
+								&:hover
+									&::before
+										width: 100%
+.form-anim-block
+	max-width: 450px
+	position: relative
+	&::after
+		position: absolute
+		content: ''
+		background: $g-pink
+		width: 0%
+		transition: 1s
+		height: 2px
+		bottom: 0
+		left: 0
+	&:not(:last-of-type)
+		margin-bottom: 10px
+	&:first-of-type
+		margin-top: 24px

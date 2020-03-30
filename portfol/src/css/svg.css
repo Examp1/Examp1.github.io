@@ -1,0 +1,74 @@
+#emastsaagq81 {
+  position: relative; }
+  #emastsaagq81 #emastsaagq84 {
+    -webkit-animation: emastsaagq84anim 2s 0.5s ease infinite;
+            animation: emastsaagq84anim 2s 0.5s ease infinite;
+    transform: matrix(0.23359, -0.23359, 0.23359, 0.23359, 164.86754, 105.50094);
+    opacity: 0; }
+
+@-webkit-keyframes emastsaagq84anim {
+  0% {
+    opacity: 0;
+    stroke-width: 5;
+    transform: matrix(0.23359, -0.23359, 0.23359, 0.23359, 164.86754, 105.50094); }
+  5% {
+    opacity: 1; }
+  100% {
+    transform: matrix(3.58843, -3.58843, 3.65797, 3.65797, 69.0053, 104.51727);
+    opacity: 1;
+    stroke-width: 0; } }
+
+@keyframes emastsaagq84anim {
+  0% {
+    opacity: 0;
+    stroke-width: 5;
+    transform: matrix(0.23359, -0.23359, 0.23359, 0.23359, 164.86754, 105.50094); }
+  5% {
+    opacity: 1; }
+  100% {
+    transform: matrix(3.58843, -3.58843, 3.65797, 3.65797, 69.0053, 104.51727);
+    opacity: 1;
+    stroke-width: 0; } }
+  #emastsaagq81 #emastsaagq85 {
+    -webkit-animation: emastsaagq85anim 2s ease infinite;
+            animation: emastsaagq85anim 2s ease infinite; }
+    #emastsaagq81 #emastsaagq85 #emastsaagq86, #emastsaagq81 #emastsaagq85 #emastsaagq87 {
+      -webkit-animation: emastsaagq85anim2 2s ease infinite;
+              animation: emastsaagq85anim2 2s ease infinite;
+      stroke-width: 1.5; }
+
+@-webkit-keyframes emastsaagq85anim2 {
+  0% {
+    stroke-width: 1.5; }
+  90% {
+    stroke-width: 1.5; }
+  100% {
+    stroke-width: 0; } }
+
+@keyframes emastsaagq85anim2 {
+  0% {
+    stroke-width: 1.5; }
+  90% {
+    stroke-width: 1.5; }
+  100% {
+    stroke-width: 0; } }
+
+@-webkit-keyframes emastsaagq85anim {
+  0% {
+    stroke-width: 1.5;
+    transform: matrix(0.19866, 0, 0, 0.19866, 137.43066, 84.5459); }
+  95% {
+    stroke-width: 1.5; }
+  100% {
+    stroke-width: 0;
+    transform: matrix(0.84068, 0, 0, 0.84068, 27.32338, 16.80905); } }
+
+@keyframes emastsaagq85anim {
+  0% {
+    stroke-width: 1.5;
+    transform: matrix(0.19866, 0, 0, 0.19866, 137.43066, 84.5459); }
+  95% {
+    stroke-width: 1.5; }
+  100% {
+    stroke-width: 0;
+    transform: matrix(0.84068, 0, 0, 0.84068, 27.32338, 16.80905); } }

@@ -1,0 +1,84 @@
+.portfol
+	background: darken($c-bg-black, 0%)
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+	align-items: center
+	overflow: hidden
+	background: url(/img/jpg/sect-text.jpg) center/cover no-repeat
+	.want
+		position: absolute
+		bottom: 20%
+		right: 20%
+		color: #fff
+		margin-right: 0
+		font-family: Montserrat
+		font-style: normal
+		font-weight: 600
+		font-size: 59px
+		text-decoration: none
+		line-height: 63px
+		letter-spacing: 0.03em
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		// background: $g-pink
+		// -webkit-background-clip: text
+		// -webkit-text-fill-color: transparent
+		.arrow
+			position: absolute
+			right: -80px
+			top: 70%
+			-webkit-transform: translateY(-50%)
+			transform: translateY(-50%)
+	.ss
+		font-size: 550px
+		color: transparent
+		@include mons_600
+		text-align: center
+		background: url(/img/jpg/sect-text.jpg) center/cover no-repeat
+		-webkit-background-clip: text
+		transition: 1s
+.transparent-text 
+	font-family: 'Rubik One', sans-serif
+	text-transform: uppercase
+	background: #000
+	font-weight: 700
+	width: 100%
+	height: 100%
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+	align-items: center
+	display: flex
+	margin: 0px auto
+	color: white
+	mix-blend-mode: multiply
+	padding: 5px 10px
+	transition: 15s
+	transform: scale(1)
+	font-size: 500px
+	white-space: nowrap
+	-webkit-background-clip: content-text
+	position: absolute
+	&.finished
+		display: none
+.portfol-title
+	font-size: 150px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	text-transform: uppercase
+	@include mons_700
+	color: #14141C
+	text-shadow: 0px 0px 2px rgba(242, 242, 242, 0.5)

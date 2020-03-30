@@ -1,0 +1,145 @@
+.logo-a
+	text-decoration: none
+.head
+	position: fixed
+	top: 0
+	color: #fff
+	z-index: 998
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	width: 100%
+	margin: 33px auto
+	padding-left: 2.5%
+	padding-right: 2.5%
+	justify-content: space-between
+	.l
+		position: relative
+		z-index: 2
+		&::before
+			content: ''
+			position: absolute
+			top: -33px
+			left: -50px
+			border: 100px solid transparent
+			border-left: 100px solid $c-bg-black
+			border-top: 100px solid $c-bg-black
+			z-index: -1
+			// background-color: $c-bg-black
+	.language
+		list-style-type: none
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		li
+			&:not(:last-of-type)
+				margin-right: 20px
+			a
+				font-family: Roboto Condensed
+				font-style: normal
+				font-weight: 300
+				font-size: 10px
+				line-height: 12px
+				letter-spacing: 0.135em
+				text-transform: uppercase
+				color: #fff
+				text-decoration: none
+				&.active
+					background: $g-pink
+					-webkit-background-clip: text
+					-webkit-text-fill-color: transparent
+	.text
+		font-family: Montserrat
+		font-style: normal
+		font-weight: normal
+		font-size: 10.9226px
+		line-height: 13px
+		letter-spacing: 0.15em
+		color: #fff
+		span
+			font-weight: 600
+			b
+				background: $g-pink
+				-webkit-background-clip: text
+				-webkit-text-fill-color: transparent
+	.menu
+		background-color: $c-bg-black
+		width: 46px
+		display: block
+		height: 46px
+		border-radius: 50%
+		position: relative
+		span
+			position: absolute
+			transform: translateY(-50%)
+			background-color: #fff
+			height: 1px
+			@include l50
+			&:nth-child(1)
+				top: 40%
+				left: 60%
+				width: 10px
+			&:nth-child(2)
+				top: 50%
+				width: 20px
+			&:nth-child(3)
+				top: 60%
+				width: 20px
+.portfol__link
+	position: fixed
+	color: #fff
+	z-index: 998
+	bottom: 33px
+	right: 2.5%
+	font-family: Roboto Condensed
+	font-style: normal
+	font-weight: normal
+	font-size: 11px
+	line-height: 13px
+	letter-spacing: 0.17em
+	text-transform: uppercase
+	text-decoration: none
+	padding: 10px 20px
+	overflow-x: hidden 
+	transition: 1s
+	&::before
+		content: ''
+		position: absolute
+		background: $g-pink2
+		width: 20%
+		z-index: -1
+		height: 100%
+		@include t50
+		right: 0
+		transition: 1s
+	&:hover:before
+		width: 100%
+.up	
+	transition: 1s
+	position: fixed
+	z-index: 998
+	bottom: 33px
+	left: 2.5%
+	width: 46px
+	height: 46px
+	border: 1px solid #fff
+	border-radius: 50%
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+	align-items: center
+	&::before
+		content: ''
+		border: solid #fff
+		border-width: 0 3px 3px 0
+		display: inline-block
+		padding: 3px
+		transform: rotate(-135deg)
+		-webkit-transform: rotate(-135deg)
