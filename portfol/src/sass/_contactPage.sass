@@ -6,22 +6,26 @@
 	display: flex
 	flex-direction: column
 	justify-content: center
+	overflow: unset
+	section
+		height: unset
 	&-title
 		background: url(/img/jpg/contactBg.jpg) center/cover no-repeat
 		-webkit-background-clip: text
-		font-size: 22vw
+		font-size: 10vw
 		color: transparent
 		@include mons_700
 		text-align: center
 	.text
 		.desc
-			padding-left: 15%
+			padding-left: 13.9%
 			@include mons_600
 			font-size: 32px
 			line-height: 39px
 			color: $c-bg-black
+			position: sticky
 	&_form
-		margin: 0 auto
+		margin: 50px auto
 		width: 85%
 		display: -webkit-flex
 		display: -moz-flex
@@ -154,3 +158,50 @@
 		margin-bottom: 10px
 	&:first-of-type
 		margin-top: 24px
+.portfol__link.open
+	&::before
+		width: 100%
+.case
+	top: -284px
+	transform: scale(0.4)
+	height: auto
+	background: url(/img/jpg/case.jpg) center/cover no-repeat
+	position: relative
+	.bg
+		position: relative
+		top: 0
+		width: 50%
+		@include l50
+		img
+			width: 100%
+
+	.want
+		position: absolute
+		z-index: 101
+		font-size: 50px
+		text-decoration: none
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		top: 50%
+		left: 50% !important
+		transform: translate(-50%, -50%)
+		span
+			color: #fff	
+			margin-right: 0
+			@include mons_600
+			font-size: 59px
+			line-height: 63px
+			letter-spacing: 0.03em
+			&:nth-child(5)
+				margin-right: 20px
+			&:nth-child(10)
+				margin-right: 20px
+			&:last-of-type
+				margin-right: 20px
+		.arrow
+			position: absolute
+			bottom: -100px
+			@include l50

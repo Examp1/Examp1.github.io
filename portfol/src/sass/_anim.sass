@@ -99,6 +99,7 @@
 		position: fixed
 		content: ''
 		width: 100%
+		top: 0
 		height: 100vh
 		background-color: $c-bg-black
 		z-index: 998
@@ -110,3 +111,20 @@ html.is-animating .transition-anim::before
 .svg-test path
 	stroke-dashoffset: 0
 	fill: transparent
+.fontSize
+	animation: font-size 1s ease forwards
+@keyframes font-size
+	from
+		font-size: 10vw
+	to
+		font-size: 22vw
+.scale
+	animation: scale 1s ease forwards
+
+@keyframes scale
+	from
+		transform: scale(0.4)
+		top: -284px
+	to
+		transform: scale(1)
+		top: 0

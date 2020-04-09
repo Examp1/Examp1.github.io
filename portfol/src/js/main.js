@@ -1,4 +1,5 @@
 $(window).on('load', function () {
+
   function OffScroll () {
     var winScrollTop = $(window).scrollTop();
     $(window).bind('scroll',function () {
@@ -37,7 +38,7 @@ $('.up').click(function(e) {
   wow = new WOW(
     {
     callback: afterReveal,
-    mobile: false,
+    // mobile: false,
   });
   wow.init();
   
@@ -59,30 +60,9 @@ $('.up').click(function(e) {
        }));
       }, 500, $('.glitch'));
 
-  function cssAndScript() {
-     setInterval($items => {
-      $items.each((i, n) => $(n).css({
-       left: Math.random() * window.innerWidth + 'px',
-       top: Math.random() * window.innerHeight + 'px',
-     }));
-    }, 500, $('.glitch'));
-     // menu
-      let menuBtn = $('.menu'),
-      menuCircle = $('.menu-block'),
-      menuList = $('.menu-inner');
-  $(menuBtn).on('click',function(event) {
-    console.log(this);
-    event.preventDefault();
-    $(menuCircle).toggleClass('active-bg');
-    $(menuList).toggleClass('opened');
-    $('.portfol__link, .up').toggleClass('opa0');
-  });
-  }
 
 
-  const swup = new Swup();
-  swup.on('contentReplaced', cssAndScript);
-  $('.form-anim-block > input').focus(function(event) {
+ $('.form-anim-block > input').focus(function(event) {
       console.log('123');
       $(this).closest('.form-anim-block').addClass('inp-anim');
   });
@@ -90,6 +70,7 @@ $('.up').click(function(e) {
       console.log('123');
       $(this).closest('.form-anim-block').removeClass('inp-anim');
   });
+
 
   function randomInteger(min,max){
     let rand = min - 0.5 + Math.random() * (max - min + 1);
