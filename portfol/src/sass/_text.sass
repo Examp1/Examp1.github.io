@@ -71,6 +71,13 @@
 		padding: 25px
 		position: relative
 		z-index: 10
+		span::before,span::after
+			transition: .5s
+		&:hover
+			span::before
+				width: 40px
+			span::after
+				height: 10px
 		.le-t
 			position: absolute
 			top: 0

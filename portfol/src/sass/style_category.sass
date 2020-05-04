@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,700&display=swap&subset=cyrillic-ext')
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap&subset=cyrillic-ext')
+*
+	box-sizing: border-box
+	padding: 0
+	margin: 0
+	outline: none
+img
+	pointer-events: none
+*::selection
+	background-color: #E27AC7
+img,svg
+	user-select: none
+section
+	min-height: 100vh
+	// border-bottom: 10px solid pink
+	width: 100%
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	overflow: hidden
+	justify-content: space-between
+	position: relative
+.col-left,.col-right
+		width: 50%
+		height: 100%
+		position: relative
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+		align-content: center
+		flex-direction: column
+@import "mixinAndVar"
+@import "ico"
+@import "preload"
+@import "fixed"
+@import "text"
+@import "anim"
+@import "modal"
+@import "jsClass"
+@import "footer"
+@import "categoryPage"
+@import "mediaCategory"
+@import "media"
+body
+	background: $c-bg-black

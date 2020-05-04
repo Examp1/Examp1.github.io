@@ -1,0 +1,17 @@
+@media (max-width: 825px)
+	.case-wrapper
+		width: 95%
+		margin: 0 auto
+@media (max-width: 700px)
+	.case-wrapper	
+		justify-content: center
+@media (min-width: 576px)
+	.case
+		&-item
+			&:nth-child(odd)
+				transform: translateY(-100px) !important
+@media (max-width: 576px)
+	.case
+		&-item
+			&:nth-child(odd)
+				transform: translateY(0px) !important

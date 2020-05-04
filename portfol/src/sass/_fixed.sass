@@ -11,9 +11,9 @@
 	display: -o-flex
 	display: flex
 	width: 100%
-	margin: 33px auto
-	padding-left: 2.5%
-	padding-right: 2.5%
+	margin: 13px auto 33px 
+	padding-left: 0.5%
+	padding-right: 0.5%
 	justify-content: space-between
 	.l
 		position: relative
@@ -60,6 +60,9 @@
 		line-height: 13px
 		letter-spacing: 0.15em
 		color: #fff
+		display: inline-block
+		width: 90px
+		line-height: 15px
 		span
 			font-weight: 600
 			b
@@ -94,7 +97,7 @@
 	color: #fff
 	z-index: 998
 	bottom: 33px
-	right: 2.5%
+	right: 0.5%
 	font-family: Roboto Condensed
 	font-style: normal
 	font-weight: normal
@@ -123,7 +126,7 @@
 	position: fixed
 	z-index: 998
 	bottom: 33px
-	left: 2.5%
+	left: 0.5%
 	width: 46px
 	height: 46px
 	border: 1px solid #fff
@@ -143,3 +146,12 @@
 		padding: 3px
 		transform: rotate(-135deg)
 		-webkit-transform: rotate(-135deg)
+::-webkit-scrollbar 
+	width: 8px
+::-webkit-scrollbar-track 
+	background: $c-bg-black
+	// border-radius: 10px
+::-webkit-scrollbar-thumb 
+	transition: .2s
+	background: $g-pink2
+	border-radius: 10px

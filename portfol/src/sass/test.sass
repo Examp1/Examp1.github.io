@@ -1,0 +1,66 @@
+body
+	height: 200vh
+	background-color: #222
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+	align-items: center
+@import 'mixinAndVar'
+.sss
+	position: fixed
+	top: 20px
+	left: 0
+.ss
+	width: 100px
+	height: 100px
+	position: absolute
+	left: 50%
+	border: 1px solid red
+ul
+	li
+		list-style: none
+		margin: 0px 20px
+		font-size: 4em
+		a
+			position: relative
+			color: rgba(#fff,.1)
+			text-decoration: none
+			font-weight: 700
+			&::before
+				position: absolute
+				content: attr(data-text)
+				top: 0
+				overflow-x: hidden
+				color: #1bfaad
+				white-space: nowrap
+	&:hover
+		li a::before
+			animation: animOne .5s steps(12) forwards
+@keyframes animOne
+	0%
+		width: 384px
+	100%
+		width: 0px
+@keyframes animTwo
+	0%
+		width: 0px
+	100%
+		width: 384px
+ul li:hover a::before
+	animation: animTwo .5s steps(12) forwards
+@keyframes text-move
+	0%
+		left: -100%
+	100%
+		left: 100%
+.sss
+	animation
+	overflow-x: hidden
+	// position: absolute
+	top: 0
+	// left: -100%
+	transition: .5s
+	// animation: text-move 6s infinite linear

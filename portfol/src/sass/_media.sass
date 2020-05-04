@@ -1,4 +1,11 @@
 @media (max-width: 1024px)
+	.services .col-left
+		img
+			object-fit: contain
+			visibility: hidden !important
+			transition: 0s
+		.active-img
+			visibility: visible !important
 	.main-img
 		width: 50%
 @media (max-width: 768px)
@@ -7,6 +14,10 @@
 	section
 		overflow-x: hidden
 @media (min-width: 576px)
+	#pc
+		display: block
+	#mob
+		display: none
 	.mob-footer
 		display: none
 @media (max-width: 768px)
@@ -128,6 +139,17 @@
 	.transparent-text
 		display: none
 @media (max-width: 576px)
+	#pc
+		display: none
+	#mob
+		display: block
+	.head
+		background-color: $c-bg-black
+		top: 0
+		margin-top: 0
+		padding: 4px 10px
+	.head .l::before
+		display: none
 	.want 
 		left: 10px !important
 		span
@@ -136,6 +158,8 @@
 		width: 80% !important
 		height: auto !important
 @media (max-width: 375px)
+	.footer .list-wrap .list ul
+		flex-wrap: wrap
 	.link-case
 		white-space: unset
 	.servForDev__ul

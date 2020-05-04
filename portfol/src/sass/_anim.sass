@@ -120,7 +120,7 @@ html.is-animating .transition-anim::before
 		font-size: 22vw
 .scale
 	animation: scale 1s ease forwards
-
+	visibility: visible !important
 @keyframes scale
 	from
 		transform: scale(0.4)
@@ -128,3 +128,10 @@ html.is-animating .transition-anim::before
 	to
 		transform: scale(1)
 		top: 0
+[data-aos="anim-mask"] 
+	background-size: 100%
+	opacity: 0
+	transition: 2s
+	&.aos-animate
+		opacity: 1 !important
+		background-size: 200% !important

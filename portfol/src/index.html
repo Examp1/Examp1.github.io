@@ -10,10 +10,19 @@
 </head>
 <body>
 <div class="global-wrapper transition-anim" id="swup">
-		<!-- <div class="privacy">
-		<video src="img/video/Opening-PC.mp4" autoplay mute preload loop></video>
-	</div> -->
-	<!-- <section class="preload">
+	<div class="privacy" style="display: none;">
+		<video autoplay preload loop muted id="pc">
+			<source src="img/video/Opening-PC.mp4" type="video/mp4">
+  			<source src="img/video/Opening-PC.webm" type="video/webm">
+  			<source src="img/video/Opening-PC.ogv" type="video/ogv">
+		</video>
+		<video autoplay preload loop muted id="mob">
+			<source src="img/video/Opening-mob.mp4" type="video/mp4">
+  			<source src="img/video/Opening-mob.webm" type="video/webm">
+  			<source src="img/video/Opening-mob.ogv" type="video/ogv">
+		</video>
+	</div>
+	<div class="preload">
 		<svg id="emastsaagq81" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 343 211.210000" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
     	<defs>
         <linearGradient id="emastsaagq84-stroke" x1="94.279997" y1="-51.859993" x2="65.999997" y2="-51.859993" spreadMethod="pad" gradientUnits="userSpaceOnUse">
@@ -39,7 +48,7 @@
 		        </g>
 		    </g>
 		</svg>
-	</section> -->
+	</div>
 	<div class="mob-footer">
 		<ul>
 			<li><a href="#"><i class="ic-tel"></i> Контакти</a></li>
@@ -50,10 +59,17 @@
 	<div class="menu-block">
 		
 	</div>
+	<!-- menu  -->
 	<div class="menu-inner">
 			<ul>
 				<li>
-					<a href="/contact.html">123123</a>
+					<a href="/contact.html" data-text="contact">contact</a>
+				</li>
+				<li>
+					<a href="/contact.html" data-text="contact2">contact2</a>
+				</li>
+				<li>
+					<a href="/contact.html" data-text="contact3">contact3</a>
 				</li>
 			</ul>
 		</div>
@@ -138,7 +154,7 @@
 			</div>
 			<div class="wrp">
 				<div class="svg-inner">
-					<img src="img/gif/е.gif" class="svg wow fadeInDown" data-wow-delay="1.8s">
+					<img src="img/gif/e.gif" class="svg wow fadeInDown" data-wow-delay="1.8s">
 					<!-- <img src="img/svg/e-big.svg" class="svg-big" alt="svg big"> -->
 				</div>
 				<h2 class="section-title wow fadeInUp" data-wow-delay="2.8s">e-commerce</h2>
@@ -186,15 +202,18 @@
 			<div class="x-mark2 wow anim1" data-wow-delay="1.6s"></div>
 		</div>
 		<div class="col-left">
-			<img src="img/jpg/2sc-left.jpg" class="wow fadeInUp" data-wow-delay="0.5s" data-wow-offset="100" alt="">
+			<img src="img/jpg/2sc-left.jpg" class="wow fadeInUp" data-wow-delay="0.5s" data-wow-offset="100" alt="" id="slide1">
+			<img src="img/jpg/main.jpg" class="wow fadeInUp" data-wow-delay="0.5s" data-wow-offset="100" alt="" id="slide2">
+			<img src="img/jpg/section5.jpg" class="wow fadeInUp" data-wow-delay="0.5s" data-wow-offset="100" alt="" id="slide3">
+			<img src="img/jpg/servForDev.jpg" class="wow fadeInUp" data-wow-delay="0.5s" data-wow-offset="100" alt="" id="slide4">
 		</div>
 		<div class="col-right">
 			<div class="col-inner">
 				<h3 class="section-h3 wow fadeInUp" data-wow-delay="1s">
-				Полсуги для  власників та агенств
+					Полсуги для  власників та агенств
 				</h3>
 				<ul class="services__ul">
-				<li>
+				<li data-slide="slide1">
 					<h2 class="section-h2 wow fadeInUp" data-wow-delay="1s">
 						Полсуги для  власників та агенств
 					</h2>
@@ -202,19 +221,19 @@
 						Ми можемо створити крутий проект для тебе, якщо ти цього хочеш.  Найкращі web продукти народжуются тільки у повній самовідданост. Ми готові віддати все наші уміння без залишку. А ти? (переписати)
 					</p>
 				</li>
-				<li>
+				<li data-slide="slide2">
 					<h2 class="section-h2 wow fadeInUp" data-wow-delay="1s">ux/ui Дизайн</h2>
 					<p class="description wow fadeInUp" data-wow-delay="1.2s">
 						Ми можемо створити крутий проект для тебе, якщо ти цього хочеш.  Найкращі web продукти народжуются тільки у повній самовідданост. Ми готові віддати все наші уміння без залишку. А ти? (переписати)
 					</p>
 				</li>
-				<li>
+				<li data-slide="slide3">
 					<h2 class="section-h2 wow fadeInUp" data-wow-delay="1s">seo оптимізація</h2>
 					<p class="description wow fadeInUp" data-wow-delay="1.2s">
 						Ми можемо створити крутий проект для тебе, якщо ти цього хочеш.  Найкращі web продукти народжуются тільки у повній самовідданост. Ми готові віддати все наші уміння без залишку. А ти? (переписати)
 					</p>
 				</li>
-				<li>
+				<li data-slide="slide4">
 					<h2 class="section-h2 wow fadeInUp" data-wow-delay="1s">Комбо</h2>
 					<p class="description wow fadeInUp" data-wow-delay="1.2s">
 						Ми можемо створити крутий проект для тебе, якщо ти цього хочеш.  Найкращі web продукти народжуются тільки у повній самовідданост. Ми готові віддати все наші уміння без залишку. А ти? (переписати)
@@ -227,28 +246,28 @@
  	<section id="section4" class="servForDev">
  		<div class="col-left">
  			<ul class="servForDev__ul">
- 				<h3 class="section-h3 wow fadeInUp" data-wow-delay="1s">Полсуги для  розробників</h3>
+ 				<h3 class="section-h3 wow fadeInUp" data-wow-delay="0.2s">Полсуги для  розробників</h3>
 				<li>
-					<h2 class="section-h2 wow fadeInUp" data-wow-delay="1s">seo оптимізація</h2>
-					<p class="description wow fadeInUp" data-wow-delay="1.2s">
+					<h2 class="section-h2 wow fadeInUp" data-wow-delay="0.3s">seo оптимізація</h2>
+					<p class="description wow fadeInUp" data-wow-delay="0.5s">
 						Ми можемо створити крутий проект для тебе, якщо ти цього хочеш.  Найкращі web продукти народжуются тільки у повній самовідданост. Ми готові віддати все наші уміння без залишку. А ти? (переписати)
 					</p>
 				</li>
 				<li>
-					<h2 class="section-h2 wow fadeInUp" data-wow-delay="1s">Frontend</h2>
-					<p class="description wow fadeInUp" data-wow-delay="1.2s">
+					<h2 class="section-h2 wow fadeInUp" data-wow-delay="0.3s">Frontend</h2>
+					<p class="description wow fadeInUp" data-wow-delay="0.5s">
 						Ми можемо створити крутий проект для тебе, якщо ти цього хочеш.  Найкращі web продукти народжуются тільки у повній самовідданост. Ми готові віддати все наші уміння без залишку. А ти? (переписати)
 					</p>
 				</li>
 				<li>
-					<h2 class="section-h2 wow fadeInUp" data-wow-delay="1s">ux/ui Дизайн</h2>
-					<p class="description wow fadeInUp" data-wow-delay="1.2s">
+					<h2 class="section-h2 wow fadeInUp" data-wow-delay="0.3s">ux/ui Дизайн</h2>
+					<p class="description wow fadeInUp" data-wow-delay="0.5s">
 						Ми можемо створити крутий проект для тебе, якщо ти цього хочеш.  Найкращі web продукти народжуются тільки у повній самовідданост. Ми готові віддати все наші уміння без залишку. А ти? (переписати)
 					</p>
 				</li>
 				<li>
-					<h2 class="section-h2 wow fadeInUp" data-wow-delay="1s">Комбо</h2>
-					<p class="description wow fadeInUp" data-wow-delay="1.2s">
+					<h2 class="section-h2 wow fadeInUp" data-wow-delay="0.3s">Комбо</h2>
+					<p class="description wow fadeInUp" data-wow-delay="0.5s">
 						Ми можемо створити крутий проект для тебе, якщо ти цього хочеш.  Найкращі web продукти народжуются тільки у повній самовідданост. Ми готові віддати все наші уміння без залишку. А ти? (переписати)
 					</p>
 				</li>
@@ -273,8 +292,8 @@
 			
 		</div>
 		<ul class="servForDev__ul">
-			<h2 class="section-h2 wow fadeInUp" data-wow-delay="1s">Комбо</h2>
-			<p class="description wow fadeInUp" data-wow-delay="1.2s">
+			<h2 class="section-h2 wow fadeInUp" data-wow-delay="0.3s">Комбо</h2>
+			<p class="description wow fadeInUp" data-wow-delay="0.5s">
 				Ми можемо створити крутий проект для тебе, якщо ти цього хочеш.  Найкращі web продукти народжуются тільки у повній самовідданост. Ми готові віддати все наші уміння без залишку. А ти? (переписати)
 			</p>
 		</ul>
@@ -282,28 +301,28 @@
  	</section>
  	<section class="portfol">
  		<h2 class="portfol-title">
- 			<span class="wow zoomIn" data-wow-delay="3s">П</span>
- 			<span class="wow zoomIn" data-wow-delay="3s">о</span>
- 			<span class="wow zoomIn" data-wow-delay="3s">р</span>
- 			<span class="wow zoomIn" data-wow-delay="3s">т</span>
- 			<span class="wow zoomIn" data-wow-delay="3s">ф</span>
- 			<span class="wow zoomIn" data-wow-delay="3s">о</span>
- 			<span class="wow zoomIn" data-wow-delay="3s">л</span>
- 			<span class="wow zoomIn" data-wow-delay="3s">і</span>
- 			<span class="wow zoomIn" data-wow-delay="3s">о</span>
+ 			<span class="wow zoomIn" data-wow-delay="1.4s">П</span>
+ 			<span class="wow zoomIn" data-wow-delay="1.4s">о</span>
+ 			<span class="wow zoomIn" data-wow-delay="1.4s">р</span>
+ 			<span class="wow zoomIn" data-wow-delay="1.4s">т</span>
+ 			<span class="wow zoomIn" data-wow-delay="1.4s">ф</span>
+ 			<span class="wow zoomIn" data-wow-delay="1.4s">о</span>
+ 			<span class="wow zoomIn" data-wow-delay="1.4s">л</span>
+ 			<span class="wow zoomIn" data-wow-delay="1.4s">і</span>
+ 			<span class="wow zoomIn" data-wow-delay="1.4s">о</span>
  		</h2>
  		<a href="#" class="want">
-			<span class="wow trfX2" data-wow-delay="3.6s">т</span>
-			<span class="wow trfX2" data-wow-delay="3.4s">и</span>
-			<span class="wow trfX2" data-wow-delay="3.2s">ц</span>
-			<span class="wow trfX2" data-wow-delay="3s">ь</span>
+			<span class="wow trfX2" data-wow-delay="1.6s">т</span>
+			<span class="wow trfX2" data-wow-delay="1.4s">и</span>
+			<span class="wow trfX2" data-wow-delay="1.2s">ц</span>
+			<span class="wow trfX2" data-wow-delay="1s">ь</span>
 			<ul class="arrow">
 				<li><img src="img/svg/arrow-r.svg" alt="arrow" class="wow trfX2 arrow-1" data-wow-delay="2.8s"></li>
 				<li><img src="img/svg/arrow-r.svg" alt="arrow" class="wow trfX2 arrow-2" data-wow-delay="3s"></li>
 				<li><img src="img/svg/arrow-r.svg" alt="arrow" class="wow trfX2 arrow-3" data-wow-delay="3.2s"></li>
 			</ul>
 		</a>
- 		<p class="transparent-text wow text-a" data-wow-delay="1.5s" data-wow-duration="3s" data-wow-offset="200">works</p>
+ 		<p class="transparent-text wow text-a" data-wow-delay="1s" data-wow-duration="2s" data-wow-offset="200">works</p>
  	</section>
  	<section class="workTogether">
  		<div class="col-left">
@@ -405,8 +424,9 @@
 	</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-<script src="js/swup.min.js"></script>
 <script src="js/main.js"></script>
 <script src="js/swupFunc.js"></script>
+<script src="js/cookie.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

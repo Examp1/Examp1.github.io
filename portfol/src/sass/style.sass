@@ -7,8 +7,10 @@
 	outline: none
 img
 	pointer-events: none
-#swup.contact
-	background-color: #fff
+*::selection
+	background-color: #E27AC7
+img,svg
+	user-select: none
 @import "mixinAndVar"
 @import "ico"
 @import "section"
@@ -26,7 +28,5 @@ img
 @import "modal"
 @import "jsClass"
 @import "media"
-@import "contactPage"
-@import "mediaContact"
 body
 	background: $c-bg-black

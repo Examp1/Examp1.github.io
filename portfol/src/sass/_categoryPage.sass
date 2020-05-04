@@ -1,0 +1,446 @@
+.catMain
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	height: 100%
+	.top
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		height: 70vh
+	.bottom
+		height: 30vh
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		.modal-video
+			height: 64px
+			width: 64px
+			border: 1px solid rgba(242, 242, 242, 0.3)
+			text-decoration: none
+			border-radius: 50%
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: center
+			align-items: center
+			color: #fff
+			transition: .5s
+			&:hover
+				background-color: #fff
+				color: #000
+	.bottom,.top
+		color: #fff
+		.col-left
+			height: auto
+			width: 20%
+		.col-right
+			width: 80%
+	video
+		width: 100%
+		height: 100%
+		object-fit: cover
+	.anim-text-move
+		@include mons(700)
+		font-size: 150px
+		white-space: nowrap
+		color: #fff
+		position: absolute
+		transition: .2s
+		&:first-of-type
+			top: 40%
+			left: -400px
+		&:last-of-type
+			text-shadow: 0px 0px 2px #fff
+			color: $c-bg-black
+			top: 65%
+			right: -600px
+	.bottom
+		.col-left
+			position: relative
+			z-index: 10
+			background-color: darken($c-bg-black, 5)
+		.col-right
+			position: relative
+			z-index: 1
+		.inner
+			height: 100%
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			width: 100%
+		.right-col
+			width: 20%
+			position: relative
+			z-index: 10
+			background-color: darken($c-bg-black, 5)
+		.slider
+			height: 100%
+			width: 80%
+			list-style-type: none
+			.slide
+				// width: 33%
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				flex-direction: column
+				height: 100%
+				border-left: 1px solid rgba(#fff,.4)
+				background-color: darken($c-bg-black, 5)
+				transition: 1s
+				&:hover
+					height: 110%
+					transform: translateY(-10%)
+					background-color: $c-bg-black
+					.inner-a
+						background: rgba(20, 20, 28, 0.3)
+				a
+					text-decoration: none
+					padding-top: 41px
+					padding-left: 21px
+					width: 100%
+					height: 80%
+					display: inline-block
+					img
+						width: 65px
+						margin-bottom: 25px
+					h2
+						margin-bottom: 55px
+				.all-case
+					display: inline
+					font-family: Roboto Condensed
+					font-style: normal
+					font-weight: normal
+					font-size: 11px
+					line-height: 13px
+					padding-top: 0
+					letter-spacing: 0.21em
+					text-transform: uppercase
+					color: rgba(#fff,.4)
+					position: relative
+					padding-left: 30px
+					top: 35%
+					-webkit-transform: translateY(-50%)
+					transform: translateY(-50%)
+					&::before
+						content: ''
+						position: absolute
+						width: 20px
+						height: 1px
+						background-color: rgba(#fff,.4)
+						@include poa(50%, 10%)
+				.inner-a
+					height: 20%
+					padding-left: 21px
+		.slider2
+			position: relative
+			.slide
+				display: none
+			.sprite-next,.sprite-prev
+				cursor: pointer
+				position: absolute
+				top: 30px
+				display: inline-block
+				width: 47px
+				height: 47px
+				border-radius: 50%
+				border: 1px solid #C12D63
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				justify-content: center
+				align-items: center
+				&::before
+					position: absolute
+					content: ''
+					width: 20px
+					height: 20px
+					background: url(../img/svg/db-arrow.svg) center/cover no-repeat
+					z-index: 10	
+			.sprite-next
+				right: 80px
+				transform: rotate(-90deg)
+			.sprite-prev
+				left: 80px
+				&::before
+					transform: rotate(90deg)
+.slick-slider .slick-track, .slick-slider .slick-list
+	overflow: unset
+	height: 100%
+	&-item
+		position: relative
+		width: 500px
+		height: 500px
+		background-color: red
+		margin:  auto
+		margin: 20px
+		transition: 1s
+		p
+			width: 200px
+			height: 200px
+			background-color: blue
+		span
+			width: 50px
+			height: 50px
+			background-color: green
+			display: block
+.case
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	overflow: unset
+	&-wrapper
+		max-width: $container-category
+		margin: 0 auto
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		.load
+			width: 100%
+			max-width: $container-category
+			margin: 0 auto
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: center
+			margin-top: 100px
+			.load-more
+				position: relative
+				text-decoration: none
+				&::before
+					position: absolute
+					content: ''
+					width: 46px
+					height: 46px
+					border: 1px solid #C12D63
+					border-radius: 50%
+					@include l50
+					top: -60px
+					background: url(../img/svg/db-arrow.svg) center/cover no-repeat
+					background-size: 50%
+				span
+					font-family: Montserrat
+					font-style: normal
+					font-weight: 300
+					font-size: 12px
+					line-height: 110%
+					text-align: center
+					color: #F2F2F2
+	.filter
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		width: 100%
+		max-width: $container-category
+		margin: 50px auto
+		margin-bottom: 150px
+		a
+			text-decoration: none
+			background: darken($c-bg-black, 2)
+			border-radius: 50px
+			padding: 5px 5px 5px 13px
+			font-family: Montserrat
+			font-style: normal
+			font-weight: normal
+			font-size: 13px
+			line-height: 120%
+			color: rgba(255, 255, 255, 0.8)
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			transition: .5s
+			&:hover
+				background: darken($c-bg-black, 5)
+			&:not(:first-of-type)
+				margin-left: 15px
+			span
+				margin-left: 10px
+				width: 35px
+				height: 35px
+				border: 1px solid #C12D63
+				color: #C12D63
+				font-size: 30px
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				justify-content: center
+				align-items: center
+				border-radius: 50%
+	&-item
+		width: 333px
+		// height: 300px
+		display: block
+		margin-bottom: 40px
+		&:nth-child(odd)
+			transform: translateY(-100px)
+			margin-bottom: 100px
+		a
+			text-decoration: none
+			display: block
+			overflow: hidden
+			&:hover
+				.mask
+					opacity: 0.4
+					transform: scale(1.2)
+				.main-img
+					transform: translateX(0px)	
+		&.web 
+			.title
+				&::before
+					content: 'w'
+			.mask
+				&::before
+					content: 'W'
+		&.e-com 
+			.title
+				&::before
+					left: -30px
+					content: 'e'
+			.mask
+				&::before
+					content: 'Ec'
+		&.op 
+			.title
+				&::before
+					content: 'o'
+			.mask
+				&::before
+					content: 'Op'
+		&.cs 
+			.title
+				&::before
+					content: 'c'
+			.mask
+				&::before
+					content: 'Cs'
+	&-bg
+		width: 100%
+		height: 443px
+		position: relative
+		&::before
+			width: 100%
+			height: 100%
+			position: absolute
+			content: ''
+			// background: inherit
+		.mask
+			width: 100%
+			position: absolute
+			height: 100%
+			opacity: 0
+			z-index: 2
+			white-space: nowrap
+			-webkit-background-clip: content-text
+			background: inherit
+			transform: scale(1)
+			color: #fff
+			font-family: Montserrat
+			font-style: normal
+			font-weight: 700
+			mix-blend-mode: multiply
+			transition: 1s
+			&::before
+				content: ''
+				font-size: 350px
+				position: absolute
+				@include center
+		.main-img
+			position: absolute
+			z-index: 1
+			bottom: 0
+			transition: 1s
+			transform: translateX(50px)
+		.title
+			position: absolute
+			top: 32px
+			left: 60px
+			font-family: Montserrat
+			font-style: normal
+			font-weight: 500
+			font-size: 16px
+			line-height: 120%
+			color: rgba(255, 255, 255, 0.9)
+			&::before
+				content: 'w'
+				text-transform: lowercase
+				position: absolute
+				top: 0
+				left: -50px
+				opacity: .5
+				font-family: Montserrat
+				font-style: normal
+				font-weight: 600
+				font-size: 100px
+	&-text
+		color: #fff
+		h3
+			font-family: Montserrat
+			font-style: normal
+			font-weight: 600
+			font-size: 26px
+			line-height: 110%
+			color: #F2F2F2
+			margin-top: 18px
+		.tegs
+			list-style-type: none
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			margin-top: 10px
+			li 
+				&:not(:first-of-type)
+					margin-left: 10px
+				a
+					color: #fff
+					text-decoration: none
+					font-family: Montserrat
+					font-style: normal
+					font-weight: normal
+					font-size: 13px
+					line-height: 120%
+					color: rgba(255, 255, 255, 0.8)
+.footer
+	background-color: darken($c-bg-black, 5)
+	width: 100%
+	margin-top: 70px
+.bg1
+	background: linear-gradient(126.95deg, rgba(193, 45, 99, 1) 0%, rgba(131, 56, 130, 1) 100%)
+.bg2
+	background: linear-gradient(120.6deg, rgba(193, 45, 99, 1) 22.38%, rgba(131, 56, 130, 1) 92.39%)
+.bg3
+	background: linear-gradient(94.95deg, rgba(61, 205, 177, 1) 0%, rgba(72, 190, 191, 1) 100%)
+.bg4
+	background: linear-gradient(94.95deg, rgba(120, 198, 246, 1) 0%, rgba(109, 151, 245, 1) 100%)

@@ -32,8 +32,12 @@
 		img
 			width: 100%
 			position: absolute
+			transition: .5s
 			z-index: 1
 			height: 100%
+			top: 0
+			left: -100px
+			opacity: 0
 		.bg-mask
 			position: absolute
 			background: $g-pink
@@ -117,3 +121,5 @@
 	mask-image: url(/img/svg/х-mark-half.svg) 
 	background-color: #833882
 	-webkit-mask-size: 50%
+li[data-slide]
+	cursor: pointer

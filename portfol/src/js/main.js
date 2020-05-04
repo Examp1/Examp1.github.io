@@ -1,4 +1,22 @@
 $(window).on('load', function () {
+  // cookie
+  const cookieEl = document.querySelector('.privacy');
+
+
+  let cookies = () => {
+      if (!Cookies.get('hide-cookie')) {
+          setTimeout(() => {
+              cookieEl.style.display = 'block';
+          }, 100);
+      }
+
+      Cookies.set('hide-cookie', 'true', {
+          expires: 30
+      });
+  }
+
+  console.log( document.cookie );
+  cookies();
 
   function OffScroll () {
     var winScrollTop = $(window).scrollTop();
@@ -6,10 +24,10 @@ $(window).on('load', function () {
         $(window).scrollTop(winScrollTop);
     });
   }
-  // OffScroll();
+  OffScroll();
   function fadePrivacy() {
-    $('.privacy').fadeOut();
-    console.log('privacy fade');
+    $('.privacy').fadeOut().remove();
+    // console.log('privacy fade');
     $(window).unbind('scroll');
   };
   setTimeout(fadePrivacy, 7000);
@@ -29,18 +47,6 @@ $('.up').click(function(e) {
     }, 400);
     return false;
 });
-  function afterReveal (el) {
-      $(el).on('animationend', function () {
-        console.log('This runs once finished!');
-        $(this).addClass('finished');
-      });
-  };
-  wow = new WOW(
-    {
-    callback: afterReveal,
-    // mobile: false,
-  });
-  wow.init();
   
   let menuBtn = $('.menu'),
       menuCircle = $('.menu-block'),
@@ -48,6 +54,7 @@ $('.up').click(function(e) {
   $(menuBtn).on('click',function(event) {
     console.log(this);
     event.preventDefault();
+    $(this).toggleClass('menu-open');
     $(menuCircle).toggleClass('active-bg');
     $(menuList).toggleClass('opened');
     $('.portfol__link, .up').toggleClass('opa0');
@@ -77,3 +84,36 @@ $('.up').click(function(e) {
     return Math.round(rand);
   }
 });
+$('.services .col-left img:first').addClass('active-img');
+
+$('li[data-slide]').on('click', function(event) {
+  event.preventDefault();
+  let dataSlide = $(this).data('slide');
+  console.log(dataSlide);  
+  $('.services .col-left img').removeClass('active-img');
+  $('#' + dataSlide).addClass('active-img');
+});
+$('.services__ul li:first').addClass('hover-el');
+$('.services__ul li').on('click', function(event) {
+  event.preventDefault();
+  $('.services__ul li').removeClass('hover-el');
+  $(this).addClass('hover-el');
+});
+$('.menu-inner ul li a').on('mouseover', function(event) {
+  $('.menu-inner ul li a').removeClass('hover-li-a');
+  $(this).addClass('hover-li-a');
+});
+
+function afterReveal (el) {
+      $(el).on('animationend', function () {
+        console.log('This runs once finished!');
+        $(this).addClass('finished');
+      });
+  };
+  wow = new WOW(
+    {
+    callback: afterReveal,
+    // mobile: false,
+  });
+  wow.init();
+  

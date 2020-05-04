@@ -6,8 +6,13 @@ $g-green: linear-gradient(180deg, #BEF196 0%, #81F4CE 100%)
 $g-orange: linear-gradient(223.58deg, #F87188 -1.08%, #F1E149 85.64%)
 $g-purple: linear-gradient(180deg, #C12D63 0%, #833882 100%)
 $c-bg-black: #14141C
+$container-category: 825px
 
 // font
+@mixin mons($fW)
+	font-family: Montserrat
+	font-style: normal
+	font-weight: $fW
 @mixin mons_normal
 	font-family: Montserrat
 	font-style: normal
@@ -42,3 +47,7 @@ $c-bg-black: #14141C
 	top: 50%
 	left: 50%
 	transform: translate(-50%, -50%)
+@mixin poa($top, $left)
+	top: $top
+	left: $left
+	transform: translate(-$top, -$left)
