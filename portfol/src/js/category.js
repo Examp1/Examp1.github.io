@@ -107,7 +107,15 @@ $('.up').click(function(e) {
     slidesToShow: 3,
     slidesToScroll: 1,
     asNavFor: '.slider2',
-    dots: false
+    dots: false,
+    responsive: [
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
   });
    $('.slider2').slick({
     slidesToShow: 1,
