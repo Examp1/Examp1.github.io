@@ -21,10 +21,17 @@
 			text-align: left
 	.case-bg .main-img
 		width: 100%
+	.catMain .bottom .modal-video
+		margin-left: 40px
 @media (max-width: 825px)
 	.case-wrapper
 		width: 95%
 		margin: 0 auto
+@media (max-width: 768px)
+	.catMain .anim-text-move
+		position: relative
+	.catMain video
+		display: none
 @media (max-width: 700px)
 	.case-wrapper	
 		justify-content: center
@@ -38,3 +45,9 @@
 		&-item
 			&:nth-child(odd)
 				transform: translateY(0px) !important
+		.filter
+			justify-content: center
+			flex-wrap: wrap
+			max-width: 100%
+			a
+				margin-bottom: 10px

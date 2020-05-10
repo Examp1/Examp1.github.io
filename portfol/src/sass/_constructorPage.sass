@@ -1,0 +1,200 @@
+.container
+	max-width: 1100px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	width: 100%
+	&:not(.text-section)
+		margin: 0 auto
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+.first
+	background: $g-orange
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	padding-left: 145px !important
+	position: relative
+	overflow: visible
+	.text-block
+		font-family: Montserrat
+		font-style: normal
+		font-weight: 600
+		font-size: 70px
+		line-height: 100%
+		color: #F2F2F2
+		h1
+			margin-top: 18px
+			margin-bottom: 36px
+		img
+			max-width: 250px
+	.img-block
+		position: absolute
+		right: 0
+		img
+			// height: 530px
+			// width: 100%
+			object-fit: cover
+	.services
+		width: 554px
+		padding: 24px 44px 80px 44px
+		background: darken($c-bg-black, 5)
+		position: absolute
+		bottom: -40px
+		z-index: 10
+		ul
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			list-style-type: none
+			margin-top: 21px
+			margin-bottom: 17px
+			li
+				&:not(:last-of-type)
+					margin-right: 20px
+				a
+					font-family: Montserrat
+					font-style: normal
+					font-weight: 500
+					font-size: 16px
+					line-height: 120%
+					color: #FFFFFF
+					text-decoration: none
+		.title
+			font-family: Roboto Condensed
+			font-style: normal
+			font-weight: normal
+			font-size: 13px
+			line-height: 15px
+			letter-spacing: 0.21em
+			text-transform: uppercase
+			color: rgba(255, 255, 255, 0.7)
+		.descr
+			font-family: Montserrat
+			font-style: normal
+			font-weight: normal
+			font-size: 15px
+			line-height: 140%
+			color: #FFFFFF
+.text-section
+	padding: $space-xxxl 10%
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+	position: relative
+	&.text-right
+		.container
+			flex-direction: row-reverse
+		img
+			left: 0
+	&.text-left
+		.container
+			flex-direction: row
+		img
+			right: 0
+	img
+		position: absolute
+		top: 0
+	.info
+		&-wrapper
+			max-width: 780px
+		&-item
+			margin-bottom: $space-xxl
+			h3
+				font-family: Montserrat
+				font-style: normal
+				font-weight: 500
+				font-size: 26px
+				line-height: 120%
+				color: #F2F2F2
+				margin-bottom: $space-s
+			p
+				font-family: Montserrat
+				font-style: normal
+				font-weight: normal
+				font-size: 18px
+				line-height: 160%
+				color: rgba(255, 255, 255, 0.6)
+.img-wrapper
+	img
+		&:last-of-type
+			margin-bottom: 0 !important
+.text-and-media
+	background: $c-bg-black !important
+	overflow-y: unset
+	overflow-x: unset
+	.x-mark
+		top: 0
+		position: absolute
+		height: auto
+		width: 100%
+		object-fit: contain
+		z-index: 0
+	.container
+		// position: relative
+		z-index: 1
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		flex-direction: row
+		.img-block
+			width: calc(70% - 10px)
+			img
+				&:not(:last-of-type)
+					margin-bottom: 40px
+		.text-block
+			width: calc(30% - 10px)
+			.sticky
+				top: 10px
+				position: sticky
+				width: 100%
+	&.text-left
+		.container
+			flex-direction: row
+		.x-mark
+			right: 0
+	&.text-right
+		.container
+			flex-direction: row-reverse
+		.x-mark
+			left: 0
+	&.text70p
+		.container
+			.img-block
+				width: calc(30% - 10px)
+			.text-block
+				width: calc(70% - 10px)
+.row-img
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	.img-wrapp
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		img
+			margin-bottom: 20px
