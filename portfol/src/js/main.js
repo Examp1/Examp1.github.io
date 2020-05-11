@@ -86,19 +86,25 @@ $('.up').click(function(e) {
 });
 $('.services .col-left img:first').addClass('active-img');
 
-$('li[data-slide]').on('click', function(event) {
-  event.preventDefault();
-  let dataSlide = $(this).data('slide');
-  console.log(dataSlide);  
-  $('.services .col-left img').removeClass('active-img');
-  $('#' + dataSlide).addClass('active-img');
+$('.services__ul').each(function(index, el) {
+  $(el).find('li[data-slide]').on('click', function(event) {
+    event.preventDefault();
+    let dataSlide = $(this).data('slide');
+    console.log(dataSlide); 
+    $(el).closest('section').find('.col-left .img-wrapper img').removeClass('active-img');
+    $('#' + dataSlide).addClass('active-img');
+    $(el).find('li').removeClass('hover-el');
+    $(this).addClass('hover-el');
+  });
+  $(el).find('li:first').addClass('hover-el');
 });
-$('.services__ul li:first').addClass('hover-el');
-$('.services__ul li').on('click', function(event) {
-  event.preventDefault();
-  $('.services__ul li').removeClass('hover-el');
-  $(this).addClass('hover-el');
-});
+
+// $('.services__ul li:first').addClass('hover-el');
+// $('.services__ul li').on('click', function(event) {
+//   event.preventDefault();
+//   $('.services__ul li').removeClass('hover-el');
+//   $(this).addClass('hover-el');
+// });
 $('.menu-inner ul li a').on('mouseover', function(event) {
   $('.menu-inner ul li a').removeClass('hover-li-a');
   $(this).addClass('hover-li-a');

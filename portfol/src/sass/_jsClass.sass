@@ -4,20 +4,24 @@
 	&::after
 		width: 100% !important
 .active-img
-	left: 0 !important
-	top: 0 !important
 	opacity: 1 !important
 	z-index: 10 !important
+	width: 100% !important
+	height: 100% !important
+.servForDev
+	.hover-el
+		background-color: #E677B9		
 .hover-el
 	position: relative
+	background-color: #21212B
 	&::before
 		position: absolute
 		content: ''
 		width: 25px
 		height: 20px
 		// background: red
-		@include t50
-		left: -40px
+		top: 26px
+		left: 40px
 		background: url(/img/svg/arrow-white.svg) center/cover no-repeat
 .accordion-open
 	&::after

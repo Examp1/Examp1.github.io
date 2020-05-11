@@ -1,4 +1,4 @@
-.services
+.services, .servForDev
 	display: -webkit-flex
 	display: -moz-flex
 	display: -ms-flex
@@ -11,12 +11,19 @@
 	&__ul
 		position: relative
 		z-index: 101
+		background-color: #E677B9
+		margin-top: 25px
+		box-shadow: 12px 12px 19.2px rgba(133, 35, 128, 0.31), 0px 0px 4.8px rgba(71, 6, 68, 0.15)
+		li
+			padding: 26px 30px 26px 92px
 	.arrow
 		position: absolute
 		right: -110px
 		top: 70%
 		-webkit-transform: translateY(-50%)
 		transform: translateY(-50%)
+	.col-left
+		justify-content: center
 	.col-left,.col-right
 		width: 50%
 		height: 100%
@@ -29,14 +36,19 @@
 		justify-content: center
 		align-content: center
 		flex-direction: column
+		.img-wrapper
+			width: 90%
+			height: 90%
+			position: relative
+			@include l50
+			overflow: hidden
 		img
-			width: 100%
-			position: absolute
+			width: 110%
 			transition: .5s
-			z-index: 1
-			height: 100%
-			top: 0
-			left: -100px
+			position: absolute
+			height: 110%
+			top: 0px
+			left: 0px
 			opacity: 0
 		.bg-mask
 			position: absolute
@@ -58,6 +70,13 @@
 					.description
 						position: relative
 						z-index: 110
+			h3
+				font-family: Montserrat
+				font-style: normal
+				font-weight: 600
+				font-size: 34px
+				line-height: 120%
+				color: #FFFFFF
 	.elips-img
 		z-index: 100
 		position: absolute
@@ -99,6 +118,7 @@
 	top: 0
 	left: 0
 	right: 0
+	z-index: 0
 	height: 100%
 	overflow: hidden
 .x-mark2
