@@ -139,5 +139,13 @@ $('.up').click(function(e) {
       $(strH1).css('font-size','25px')
       }
   }
+  function randomInteger(min,max){
+    let rand = min - 0.5 + Math.random() * (max - min + 1);
+    return Math.round(rand);
+  }
+    // $('body').addClass('bg' + randomInteger(1,4));
+    $('.case-item').each(function(index, el) {
+      $(el).find('.case-bg').addClass('bg' + randomInteger(1,4));
+    });
 });
 

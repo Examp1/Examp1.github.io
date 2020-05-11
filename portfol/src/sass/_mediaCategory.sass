@@ -43,8 +43,13 @@
 @media (max-width: 576px)
 	.case
 		&-item
+			width: calc(50% - 10px)
 			&:nth-child(odd)
 				transform: translateY(0px) !important
+		&-bg
+			height: 320px
+		&-wrapper
+			justify-content: space-between
 		.filter
 			justify-content: center
 			flex-wrap: wrap

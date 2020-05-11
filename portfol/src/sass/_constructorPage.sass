@@ -25,6 +25,7 @@
 	padding-left: 145px !important
 	position: relative
 	overflow: visible
+	min-height: 100vh
 	.text-block
 		font-family: Montserrat
 		font-style: normal
@@ -198,3 +199,257 @@
 		flex-wrap: wrap
 		img
 			margin-bottom: 20px
+.text-section
+	position: relative
+	&::before
+		position: absolute
+		content: ''
+		top: 0
+		right: 0
+		background: url(../img/svg/x.svg) center/cover no-repeat
+		width: 100%
+		height: 100%
+	&.text-left
+		&::before
+			right: -40%
+	&.text-right
+		&::before
+			right: 40%
+.text-block
+	p
+		font-size: 18px
+		line-height: 160%
+.case
+	background: $c-bg-black !important
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	align-items: center
+	overflow: unset
+	&-wrapper
+		max-width: $container-category
+		margin-top: 100px !important
+		width: 100%
+		margin: 0 auto
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		.load
+			width: 100%
+			max-width: $container-category
+			margin: 0 auto
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: center
+			margin-top: 100px
+			.load-more
+				position: relative
+				text-decoration: none
+				&::before
+					position: absolute
+					content: ''
+					width: 46px
+					height: 46px
+					border: 1px solid #C12D63
+					border-radius: 50%
+					@include l50
+					top: -60px
+					background: url(../img/svg/db-arrow.svg) center/cover no-repeat
+					background-size: 50%
+				span
+					font-family: Montserrat
+					font-style: normal
+					font-weight: 300
+					font-size: 12px
+					line-height: 110%
+					text-align: center
+					color: #F2F2F2
+	.filter
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		width: 100%
+		max-width: $container-category
+		margin: 50px auto
+		margin-bottom: 150px
+		a
+			text-decoration: none
+			background: darken($c-bg-black, 2)
+			border-radius: 50px
+			padding: 5px 5px 5px 13px
+			font-family: Montserrat
+			font-style: normal
+			font-weight: normal
+			font-size: 13px
+			line-height: 120%
+			color: rgba(255, 255, 255, 0.8)
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			transition: .5s
+			&:hover
+				background: darken($c-bg-black, 5)
+			&:not(:first-of-type)
+				margin-left: 15px
+			span
+				margin-left: 10px
+				width: 35px
+				height: 35px
+				border: 1px solid #C12D63
+				color: #C12D63
+				font-size: 30px
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				justify-content: center
+				align-items: center
+				border-radius: 50%
+	&-item
+		width: 333px
+		// height: 300px
+		display: block
+		margin-bottom: 40px
+		a
+			text-decoration: none
+			display: block
+			overflow: hidden
+			&:hover
+				.mask
+					opacity: 0.4
+					transform: scale(1.2)
+				.main-img
+					transform: translateX(0px)	
+		&.web 
+			.title
+				&::before
+					content: 'w'
+			.mask
+				&::before
+					content: 'W'
+		&.e-com 
+			.title
+				&::before
+					left: -30px
+					content: 'e'
+			.mask
+				&::before
+					content: 'Ec'
+		&.op 
+			.title
+				&::before
+					content: 'o'
+			.mask
+				&::before
+					content: 'Op'
+		&.cs 
+			.title
+				&::before
+					content: 'c'
+			.mask
+				&::before
+					content: 'Cs'
+	&-bg
+		width: 100%
+		height: 443px
+		position: relative
+		&::before
+			width: 100%
+			height: 100%
+			position: absolute
+			content: ''
+			// background: inherit
+		.mask
+			width: 100%
+			position: absolute
+			height: 100%
+			opacity: 0
+			z-index: 2
+			white-space: nowrap
+			-webkit-background-clip: content-text
+			background: inherit
+			transform: scale(1)
+			color: #fff
+			font-family: Montserrat
+			font-style: normal
+			font-weight: 700
+			mix-blend-mode: multiply
+			transition: 1s
+			&::before
+				content: ''
+				font-size: 350px
+				position: absolute
+				@include center
+		.main-img
+			position: absolute
+			z-index: 1
+			bottom: 0
+			transition: 1s
+			transform: translateX(50px)
+		.title
+			position: absolute
+			top: 32px
+			left: 60px
+			font-family: Montserrat
+			font-style: normal
+			font-weight: 500
+			font-size: 16px
+			line-height: 120%
+			color: rgba(255, 255, 255, 0.9)
+			&::before
+				content: 'w'
+				text-transform: lowercase
+				position: absolute
+				top: 0
+				left: -50px
+				opacity: .5
+				font-family: Montserrat
+				font-style: normal
+				font-weight: 600
+				font-size: 100px
+	&-text
+		color: #fff
+		h3
+			font-family: Montserrat
+			font-style: normal
+			font-weight: 600
+			font-size: 26px
+			line-height: 110%
+			color: #F2F2F2
+			margin-top: 18px
+		.tegs
+			list-style-type: none
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			margin-top: 10px
+			li 
+				&:not(:first-of-type)
+					margin-left: 10px
+				a
+					color: #fff
+					text-decoration: none
+					font-family: Montserrat
+					font-style: normal
+					font-weight: normal
+					font-size: 13px
+					line-height: 120%
+					color: rgba(255, 255, 255, 0.8)

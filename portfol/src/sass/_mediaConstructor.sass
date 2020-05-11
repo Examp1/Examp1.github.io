@@ -3,6 +3,9 @@
 		width: 100%
 		padding-right: 32px
 		padding-left: 32px
+@media (max-width: 1024px)
+	.case-bg .main-img
+		width: 100%
 @media (max-width: 768px)
 	.first
 		padding-left: 32px !important
@@ -20,3 +23,38 @@
 			width: 100% !important
 		.container
 			flex-direction: column!important
+@media (max-width: 825px)
+	.case-wrapper
+		width: 95%
+		margin: 0 auto
+@media (max-width: 768px)
+	.catMain .anim-text-move
+		position: relative
+	.catMain video
+		display: none
+@media (max-width: 700px)
+	.case-wrapper	
+		justify-content: center
+@media (max-width: 576px)
+	.first
+		min-height: unset
+		.img-block
+			z-index: 0
+		.text-block
+			position: relative
+			z-index: 1
+	.case
+		&-item
+			width: calc(50% - 10px)
+			&:nth-child(odd)
+				transform: translateY(0px) !important
+		&-bg
+			height: 320px
+		&-wrapper
+			justify-content: space-between
+		.filter
+			justify-content: center
+			flex-wrap: wrap
+			max-width: 100%
+			a
+				margin-bottom: 10px
