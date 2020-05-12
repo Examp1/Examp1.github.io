@@ -84,7 +84,7 @@ $('.up').click(function(e) {
     return Math.round(rand);
   }
 });
-$('.services .col-left img:first').addClass('active-img');
+$('.services .col-left img:first, .servForDev .col-left img:first').addClass('active-img');
 
 $('.services__ul').each(function(index, el) {
   $(el).find('li[data-slide]').on('click', function(event) {
