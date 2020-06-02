@@ -12,7 +12,7 @@ let cookies = () => {
     Cookies.set('hide-cookie', 'true', {
         expires: 30
     });
-}
+};
 
 console.log( document.cookie );
 

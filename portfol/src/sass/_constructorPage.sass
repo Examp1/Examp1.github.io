@@ -33,6 +33,8 @@
 		font-size: 70px
 		line-height: 100%
 		color: #F2F2F2
+		position: relative
+		z-index: 2
 		h1
 			margin-top: 18px
 			margin-bottom: 36px
@@ -42,6 +44,8 @@
 	.img-block
 		position: absolute
 		right: 0
+		z-index: 0
+		bottom: -10px
 		img
 			// height: 530px
 			// width: 100%
@@ -89,7 +93,26 @@
 			font-size: 15px
 			line-height: 140%
 			color: #FFFFFF
-.text-section
+.text-static
+	background: $c-bg-black !important
+	flex-direction: row-reverse
+	&::before
+		position: absolute
+		content: ''
+		top: 0
+		right: 40%
+		background: url(../img/svg/x.svg) center/cover no-repeat
+		width: 100%
+		height: 100%
+.text-block, .text-section, .text-static
+	p
+		font-family: Montserrat
+		font-style: normal
+		font-weight: normal
+		font-size: 18px
+		line-height: 160%
+		color: rgba(255, 255, 255, 0.6)
+.text-section, .text-static
 	padding: $space-xxxl 10%
 	display: -webkit-flex
 	display: -moz-flex
@@ -98,6 +121,8 @@
 	display: flex
 	justify-content: center
 	position: relative
+	.inner
+		max-width: 700px
 	&.text-right
 		.container
 			flex-direction: row-reverse
@@ -115,7 +140,8 @@
 		&-wrapper
 			max-width: 780px
 		&-item
-			margin-bottom: $space-xxl
+			&:not(:last-of-type)
+				margin-bottom: $space-xxl
 			h3
 				font-family: Montserrat
 				font-style: normal
@@ -124,13 +150,6 @@
 				line-height: 120%
 				color: #F2F2F2
 				margin-bottom: $space-s
-			p
-				font-family: Montserrat
-				font-style: normal
-				font-weight: normal
-				font-size: 18px
-				line-height: 160%
-				color: rgba(255, 255, 255, 0.6)
 .img-wrapper
 	img
 		&:last-of-type
@@ -157,7 +176,7 @@
 		justify-content: space-between
 		flex-direction: row
 		.img-block
-			width: calc(70% - 10px)
+			width: calc(65% - 10px)
 			img
 				&:not(:last-of-type)
 					margin-bottom: 40px
@@ -216,10 +235,11 @@
 	&.text-right
 		&::before
 			right: 40%
-.text-block
-	p
+.text-block, .inner
+	p, li
 		font-size: 18px
 		line-height: 160%
+		color: rgba(255, 255, 255, 0.6)
 .case
 	background: $c-bg-black !important
 	display: -webkit-flex
@@ -399,10 +419,12 @@
 				@include center
 		.main-img
 			position: absolute
+			width: 100%
+			height: 100%
+			object-fit: cover
 			z-index: 1
-			bottom: 0
 			transition: 1s
-			transform: translateX(50px)
+			transform: translateX(40px)
 		.title
 			position: absolute
 			top: 32px
@@ -454,3 +476,24 @@
 					font-size: 13px
 					line-height: 120%
 					color: rgba(255, 255, 255, 0.8)
+.btn-main
+	font-family: Roboto Condensed
+	font-style: normal
+	font-weight: normal
+	font-size: 12px
+	line-height: 14px
+	letter-spacing: 0.17em
+	text-transform: uppercase
+	color: #FFFFFF
+	text-decoration: none
+	border: 1px solid rgba(255, 255, 255, 0.14)
+	padding: 20px 130px
+	box-sizing: border-box
+	margin-top: 30px
+	display: inline-block
+iframe
+	width: 100%
+video
+	width: 100%
+	height: auto
+	margin-top: 4rem

@@ -1,3 +1,21 @@
+@media (min-width: 768px) and (max-width: 1200px)
+	body
+		overflow-x: hidden
+	.btn-main
+		text-align: center
+		padding: 20px 0px
+		width: 100%
+@media (max-width: 1280px)
+	.first
+		padding: 40px 0px 0px 0px !important
+		flex-direction: column
+		align-items: flex-start
+		.services
+			bottom: 0px
+			position: static
+			width: 100%
+		.text-block
+			margin-left: 80px
 @media (max-width: 1100px)
 	.container
 		width: 100%
@@ -7,6 +25,14 @@
 	.case-bg .main-img
 		width: 100%
 @media (max-width: 768px)
+	video
+		margin-top: 2rem
+	.row-img.img3
+		img
+			margin-bottom: 100px
+			width: calc(50% - 10px) !important
+			&:nth-child(2n)
+				transform: translateY(150px)
 	.first
 		padding-left: 32px !important
 		flex-direction: column
@@ -28,6 +54,8 @@
 		width: 95%
 		margin: 0 auto
 @media (max-width: 768px)
+	.text-and-media .text-block
+		margin-bottom: 20px
 	.catMain .anim-text-move
 		position: relative
 	.catMain video
@@ -36,6 +64,15 @@
 	.case-wrapper	
 		justify-content: center
 @media (max-width: 576px)
+	.first
+		padding-left: 10px !important
+		padding-right: 10px !important
+		.services
+			padding: 10px 15px
+	.link-case
+		display: block
+		width: 100%
+		text-align: center
 	.first
 		min-height: unset
 		.img-block
@@ -56,5 +93,71 @@
 			justify-content: center
 			flex-wrap: wrap
 			max-width: 100%
+			a
+				margin-bottom: 10px
+@media (max-width: 576px)
+	.catMain .anim-text-move:first-of-type
+		top: 0%
+	.catMain .anim-text-move:last-of-type
+		top: 5%
+	.case-item:nth-child(odd)
+		margin-bottom: 50px
+	.case-text .tegs li a
+		font-size: 11px
+	.case-text h3
+		font-size: 22px
+	.filter-modal-btn
+		display: none
+	.case
+		&-item
+			width: calc(50% - 10px)
+			&:nth-child(odd)
+				transform: translateY(0px) !important
+		&-bg
+			height: 320px
+		&-wrapper
+			justify-content: space-between
+		.filter
+			justify-content: center
+			flex-wrap: wrap
+			max-width: 100%
+			margin-bottom: 50px
+			a
+				margin-bottom: 10px
+@media (max-width: 425px)
+	.row-img.img3
+		img
+			margin-bottom: 50px
+			&:nth-child(2n)
+				transform: translateY(70px)
+	.case-bg
+		height: 270px
+@media (max-width: 812px) and (orientation: landscape)
+	.catMain .anim-text-move:first-of-type
+		top: 0%
+	.catMain .anim-text-move:last-of-type
+		top: 5%
+	.case-item:nth-child(odd)
+		margin-bottom: 50px
+	.case-text .tegs li a
+		font-size: 11px
+	.case-text h3
+		font-size: 22px
+	.filter-modal-btn
+		display: none
+	.case
+		&-item
+			width: calc(50% - 10px)
+			&:nth-child(odd)
+				transform: translateY(0px) !important
+		&-bg
+			height: 320px
+		&-wrapper
+			justify-content: space-between
+		.filter
+			justify-content: center
+			flex-wrap: wrap
+			max-width: 100%
+			margin-bottom: 50px
 			a
 				margin-bottom: 10px

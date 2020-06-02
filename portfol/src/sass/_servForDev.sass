@@ -1,6 +1,16 @@
 .servForDev
 	flex-direction: row-reverse
 	background: $c-bg-black
+	.services__ul li
+		padding-left: 30px
+		padding-right: 92px
+	.hover-el::before
+		right: 40px
+		left: unset
+		transform: rotate(180deg)
+	.x-mark2
+		right: 30%
+		background-color: rgba(#ffffff, .4)
 	.arrow
 		position: absolute
 		right: -80px
@@ -19,6 +29,14 @@
 			margin: 0
 			box-shadow: 12px 12px 19.2px rgba(11, 4, 19, 0.31), 0px 0px 4.8px rgba(11, 4, 19, 0.15)
 			background-color: #21212B
+			li
+				transition: 0.5s
+				&:not(:first-of-type)
+					margin-top: 0 !important
+				&:hover
+					background-color: #18181F
+				&:not(:last-of-type)
+					border-bottom: 1px solid lighten(#21212B, 10)
 	.want
 		position: absolute
 		left: 150px
@@ -26,11 +44,6 @@
 		z-index: 101
 		font-size: 50px
 		text-decoration: none
-		display: -webkit-flex
-		display: -moz-flex
-		display: -ms-flex
-		display: -o-flex
-		display: flex
 		span
 			color: #fff	
 			margin-right: 0
@@ -63,16 +76,18 @@
 			transform: translateY(-50%) translateX(10px) !important
 .servForDev
 	.section-h3
-		padding-left: 60px
+		padding-left: 90px
 	.h3-img
 		position: relative
 		display: inline
-		padding-left: 60px
+		padding-left: 90px
+		width: 100%
+		display: inline-block
 		&::before
 			content: ''
 			position: absolute
 			top: -40px
-			left: -40px
+			left: -10px
 			background: url('/img/svg/ic-black.svg') center/contain no-repeat
 			width: 99px
 			height: 91px

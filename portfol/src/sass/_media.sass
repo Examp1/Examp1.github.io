@@ -1,8 +1,18 @@
-@media (max-width: 1440px)
+@media (min-width: 1600px)
+	.services .col-left img, .servForDev .col-left img
+		object-fit: cover
+	.workTogether .logo
+		width: 596px !important
+		height: 343px !important
+@media (max-width: 1600px)
 	.services .col-left img, .services .col-right img, .servForDev .col-left img, .servForDev .col-right img
 		object-fit: contain
 		width: 100%
 		height: 100%
+@media (max-width: 1440px)
+	.main-img
+		width: 35%
+	.services .col-left img, .services .col-right img, .servForDev .col-left img, .servForDev .col-right img
 		.want
 			position: relative !important
 @media (max-width: 1024px)
@@ -16,6 +26,22 @@
 	.main-img
 		width: 50%
 @media (max-width: 768px)
+	.menu
+		&-inner
+			flex-direction: column
+			justify-content: center
+			.menu-list, .social, .list
+				width: 100%
+				text-align: left
+				margin-top: 10px
+				margin-bottom: 10px
+				li
+					margin-right: 0px
+					margin-left: 0px
+				.section-h3
+					text-align: left
+	.services .want, .servForDev .want
+		bottom: 0px !important
 	.portfol__link, .up
 		display: none
 	section
@@ -25,23 +51,14 @@
 		display: block
 	#mob
 		display: none
+@media (min-width: 769px)
 	.mob-footer
 		display: none
 @media (max-width: 768px)
-	.services .want, .servForDev .want
-		position: relative !important
-		bottom: 0
-		left: 0
-		margin: 0 auto !important
-		margin-top: 20px !important
-	.services .col-left
-		margin-bottom: 40px
-	.servForDev .col-right ul
-		margin: 0 auto
 	.mob-footer
 		position: fixed
 		bottom: 0
-		z-index: 998
+		z-index: 999
 		width: 100%
 		background: $g-pink2
 		ul
@@ -62,6 +79,56 @@
 				letter-spacing: -0.03em
 				text-decoration: none
 				color: rgba(255, 255, 255, 0.7)
+	.language-mob
+		transition: 1.5s
+		opacity: 0
+		display: flex
+		border-radius: 5px
+		width: 100%
+		justify-content: center
+		background: rgba(169, 166, 186, 0.1)
+		li
+			width: 100%
+			text-align: left
+			&:not(:last-of-type)
+				margin-right: 30px
+				position: relative
+				text-align: right
+				&::before
+					content: ''
+					background-color: #D5D3E1
+					width: 1px
+					height: 70%
+					@include t50
+					right: -15px
+					position: absolute
+			a
+				width: 100%
+				display: inline-block
+				padding: 20px
+				font-family: Roboto Condensed
+				font-style: normal
+				font-weight: normal
+				font-size: 12px !important
+				line-height: 14px
+				letter-spacing: 0.135em
+				text-transform: uppercase
+				color: rgba(213, 211, 225, 0.5);
+				text-decoration: none
+				&.active
+					color: #D5D3E1
+	.head .language
+		display: none
+	.services .want, .servForDev .want
+		position: relative !important
+		bottom: 0
+		left: 0
+		margin: 0 auto !important
+		margin-top: 20px !important
+	.services .col-left
+		margin-bottom: 40px
+	.servForDev .col-right ul
+		margin: 0 auto
 	section 
 		height: auto
 	section.main
@@ -156,6 +223,35 @@
 	.transparent-text
 		display: none
 @media (max-width: 576px)
+	.services, .servForDev
+		.want 
+			display: flex
+			width: 100%
+			justify-content: center
+			.arrow
+				top: 130%
+				right: 40%
+				li
+					margin-top: 20px
+					width: 35px
+					height: 41px
+	.want .arrow
+		right: -100px	
+	.services .col-left .col-inner, .services .col-right .col-inner, .servForDev .col-left .col-inner, .servForDev .col-right .col-inner
+		width: 90%
+	.services .col-left .img-wrapper, .services .col-right .img-wrapper, .servForDev .col-left .img-wrapper, .servForDev .col-right .img-wrapper
+		display: none
+	.language-mob
+		position: absolute
+		top: 70px
+	.menu-inner ul li 
+		font-size: unset
+		a
+			font-size: 39px
+	.menu-inner .menu-list li 
+		font-size: unset	
+		a
+			font-size: 39px
 	#pc
 		display: none
 	#mob
@@ -174,6 +270,14 @@
 	.workTogether .logo
 		width: 80% !important
 		height: auto !important
+	.servForDev, .services 
+		.services__ul li
+			padding: 15px
+		.hover-el
+			&::before
+				width: 0px
+	.portfol .want
+		left: unset !important
 @media (max-width: 375px)
 	.footer .list-wrap .list ul
 		flex-wrap: wrap

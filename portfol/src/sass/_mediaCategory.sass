@@ -1,3 +1,29 @@
+@media (min-width: 1920px)
+	.filter-modal
+		span, li, a
+			font-size: 14px !important
+@media (min-width: 1600px)
+	$container-category: 1200px
+	.case-wrapper
+		max-width: $container-category
+		width: 100%
+		.case-item
+			width: calc(333px + 10%)
+			.case-bg
+				height: 575px
+	.catMain .bottom .slider .slide a img
+		width: 105px
+	.filter-modal-btn span
+		width: 242px
+	.filter-modal
+		width: 323px
+	.catMain .bottom .slider2 .sprite-next, .catMain .bottom .slider2 .sprite-prev
+		width: 57px
+		height: 57px
+@media (min-width: 1024px)
+	.filter-modal
+		&-body
+			height: 550px
 @media (max-width: 1024px)
 	.catMain .bottom
 		flex-direction: column	
@@ -28,6 +54,8 @@
 		width: 95%
 		margin: 0 auto
 @media (max-width: 768px)
+	.mob-footer
+		display: none
 	.catMain .anim-text-move
 		position: relative
 	.catMain video
@@ -41,6 +69,19 @@
 			&:nth-child(odd)
 				transform: translateY(-100px) !important
 @media (max-width: 576px)
+	.catMain .anim-text-move:first-of-type
+		top: 0%
+	.catMain .anim-text-move:last-of-type
+		top: 5%
+	.case-item:nth-child(odd)
+		margin-bottom: 50px
+	.case-text .tegs li a
+		font-size: 11px
+	.case-text h3
+		font-size: 22px
+	.filter-modal-btn
+		bottom: 0px
+		right: 0px
 	.case
 		&-item
 			width: calc(50% - 10px)
@@ -54,5 +95,38 @@
 			justify-content: center
 			flex-wrap: wrap
 			max-width: 100%
+			margin-bottom: 50px
+			a
+				margin-bottom: 10px
+@media (max-width: 425px)
+	.case-bg
+		height: 270px
+@media (max-width: 812px) and (orientation: landscape)
+	.catMain .anim-text-move:first-of-type
+		top: 0%
+	.catMain .anim-text-move:last-of-type
+		top: 5%
+	.case-item:nth-child(odd)
+		margin-bottom: 50px
+	.case-text .tegs li a
+		font-size: 11px
+	.case-text h3
+		font-size: 22px
+	.filter-modal-btn
+		display: none
+	.case
+		&-item
+			width: calc(50% - 10px)
+			&:nth-child(odd)
+				transform: translateY(0px) !important
+		&-bg
+			height: 320px
+		&-wrapper
+			justify-content: space-between
+		.filter
+			justify-content: center
+			flex-wrap: wrap
+			max-width: 100%
+			margin-bottom: 50px
 			a
 				margin-bottom: 10px

@@ -4,7 +4,7 @@
 	position: fixed
 	top: 0
 	color: #fff
-	z-index: 998
+	z-index: 999
 	display: -webkit-flex
 	display: -moz-flex
 	display: -ms-flex
@@ -92,6 +92,19 @@
 			&:nth-child(3)
 				top: 60%
 				width: 20px
+		&::before
+			content: var(--text)
+			position: absolute
+			text-decoration: none
+			@include t50
+			font-family: Montserrat
+			font-style: normal
+			font-weight: normal
+			font-size: 10.9226px
+			line-height: 13px
+			letter-spacing: 0.15em
+			color: #fff
+			left: -45px
 .portfol__link
 	position: fixed
 	color: #fff

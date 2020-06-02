@@ -11,19 +11,15 @@
 </head>
 
 <body>
-	<div class="global-wrapper transition-anim" id="swup">
+	<div class="global-wrapper">
+		<!-- куки прелодер -->
 		<div class="privacy" style="display: none;">
-			<video autoplay preload loop muted id="pc">
-				<source src="img/video/Opening-PC.mp4" type="video/mp4">
-				<source src="img/video/Opening-PC.webm" type="video/webm">
-				<source src="img/video/Opening-PC.ogv" type="video/ogv">
-			</video>
-			<video autoplay preload loop muted id="mob">
-				<source src="img/video/Opening-mob.mp4" type="video/mp4">
-				<source src="img/video/Opening-mob.webm" type="video/webm">
-				<source src="img/video/Opening-mob.ogv" type="video/ogv">
-			</video>
+			<video src="img/video/Opening-PC.mp4" preload muted playsinline autoplay="autoplay" loop="loop"
+				id="pc"></video>
+			<video src="img/video/Opening-PC.webm" preload muted playsinline autoplay="autoplay" loop="loop"
+				id=></video>
 		</div>
+		<!-- прелодер -->
 		<div class="preload">
 			<svg id="emastsaagq81" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 				viewBox="0 0 343 211.210000" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
@@ -60,30 +56,7 @@
 				</g>
 			</svg>
 		</div>
-		<div class="mob-footer">
-			<ul>
-				<li><a href="#"><i class="ic-tel"></i> Контакти</a></li>
-				<li><a href="#"><i class="ic-diamond"></i> Послгуи</a></li>
-				<li><a href="#"><i class="ic-case"></i> Портфоліо</a></li>
-			</ul>
-		</div>
-		<div class="menu-block">
-
-		</div>
-		<!-- menu  -->
-		<div class="menu-inner">
-			<ul>
-				<li>
-					<a href="/contact.html" data-text="Контакты">Контакты</a>
-				</li>
-				<li>
-					<a href="/constructor.html" data-text="Конструктор">Конструктор</a>
-				</li>
-				<li>
-					<a href="/category.html" data-text="Категории">Категории</a>
-				</li>
-			</ul>
-		</div>
+	
 		<!-- fixed el -->
 		<header class="head">
 			<div class="l">
@@ -94,7 +67,7 @@
 				</ul>
 			</div>
 			<div class="r">
-				<a href="#" class="menu" id="menu">
+				<a href="#" class="menu" id="menu" style="--text: 'Меню'">
 					<span></span>
 					<span></span>
 					<span></span>
@@ -155,8 +128,7 @@
 						<!-- <img src="img/svg/w-big.svg" class="svg-big" alt="svg big"> -->
 					</div>
 					<h2 class="section-title wow fadeInUp" data-wow-delay="2.6s">web сервіси</h2>
-					<div class="description wow fadeInUp" data-wow-delay="2.6s">Розробка автоматизованих web сервісів
-						різної складності. Виконання робот частково та під ключ.</div>
+					<div class="description wow fadeInUp" data-wow-delay="2.6s">Розробляємо автоматизовані web-сервіси, згідно найтонших нюансів бізнес-процесів замовника.</div>
 					<div class="price wow fadeInUp" data-wow-delay="2.6s">від $ 3 000</div>
 					<ul class="arrow">
 						<li><img src="img/svg/arrow-r.svg" alt="arrow" class="wow fadeIn arrow-1" data-wow-delay="2.8s">
@@ -169,12 +141,11 @@
 				</div>
 				<div class="wrp">
 					<div class="svg-inner">
-						<img src="img/gif/e.gif" class="svg wow fadeInDown" data-wow-delay="1.8s">
+						<img src="img/gif/sect2-e.gif" class="svg wow fadeInDown" data-wow-delay="1.8s">
 						<!-- <img src="img/svg/e-big.svg" class="svg-big" alt="svg big"> -->
 					</div>
 					<h2 class="section-title wow fadeInUp" data-wow-delay="2.8s">e-commerce</h2>
-					<div class="description wow fadeInUp" data-wow-delay="2.8s">Розробка автоматизованих web сервісів
-						різної складності. Виконання робот частково та під ключ.</div>
+					<div class="description wow fadeInUp" data-wow-delay="2.8s">Створюємо швидкі та гнучкі інтернет-магазини, що адаптуються на всі сучасні мобільні пристрої</div>
 					<div class="price wow fadeInUp" data-wow-delay="2.8s">від $ 3 000</div>
 					<ul class="arrow">
 						<li><img src="img/svg/arrow-r.svg" alt="arrow" class="wow fadeIn arrow-1" data-wow-delay="3.4s">
@@ -190,9 +161,8 @@
 						<img src="img/gif/b.gif" class="svg wow fadeInDown" data-wow-delay="1.8s" alt="svg">
 						<!-- <img src="img/svg/k-big.svg" class="svg-big" alt="svg big"> -->
 					</div>
-					<h2 class="section-title wow fadeInUp" data-wow-delay="3s">корпоративні сайти</h2>
-					<div class="description wow fadeInUp" data-wow-delay="3s">Розробка автоматизованих web сервісів
-						різної складності. Виконання робот частково та під ключ.</div>
+					<h2 class="section-title wow fadeInUp" data-wow-delay="3s">Корпоративные сайты</h2>
+					<div class="description wow fadeInUp" data-wow-delay="3s">Програмуємо представництво компанії в інтернеті на найвищому рівні інформативності та дизайну</div>
 					<div class="price wow fadeInUp" data-wow-delay="3s">від $ 3 000</div>
 					<ul class="arrow">
 						<li><img src="img/svg/arrow-r.svg" alt="arrow" class="wow fadeIn arrow-1" data-wow-delay="4s">
@@ -206,9 +176,7 @@
 			</div>
 		</section>
 		<section id="section3" class="services">
-			<img src="img/svg/Ellipse.svg" class="elips-img wow trfX" data-wow-delay="1.6s" alt="">
 			<div class="x-mark-wrap">
-				<!-- <img src="img/svg/x-mark.svg" class="x-mark wow trfY" data-wow-delay="1.6s" alt=""> -->
 				<div class="x-mark2 wow anim1" data-wow-delay="1.6s"></div>
 			</div>
 			<div class="col-left">
@@ -232,59 +200,64 @@
 					<ul class="services__ul">
 						<li data-slide="slide1">
 							<h2 class="section-h2 wow fadeInUp" data-wow-delay="1s">
-								Полсуги для власників та агенств
+								UI / UX дизайн.
 							</h2>
 							<p class="description wow fadeInUp" data-wow-delay="1.2s">
-								Ми можемо створити крутий проект для тебе, якщо ти цього хочеш. Найкращі web продукти
-								народжуются тільки у повній самовідданост. Ми готові віддати все наші уміння без
-								залишку. А ти? (переписати)
+								Правильна візуальна комунікація з потенційними клієнтами – є ключем до правильного
+								розуміння продукту та місій компанії. В дизайні ми керуємось нюансами та користувацьким
+								досвідом роботи в інтернеті. Дизайн повинен бути обдуманим! Тому наші продукти високо
+								оцінює професійне ком’юнеті.
 							</p>
 						</li>
 						<li data-slide="slide2">
-							<h2 class="section-h2 wow fadeInUp" data-wow-delay="1s">ux/ui Дизайн</h2>
-							<p class="description wow fadeInUp" data-wow-delay="1.2s">
-								Ми можемо створити крутий проект для тебе, якщо ти цього хочеш. Найкращі web продукти
-								народжуются тільки у повній самовідданост. Ми готові віддати все наші уміння без
-								залишку. А ти? (переписати)
+							<h2 class="section-h2 wow fadeInUp" data-wow-delay="1s">Програмування.</h2>
+							<p class="description wow fadeInUp" data-wow-delay="1.2s">Ми готові виконати Ваші
+								найсміливіші ідеї для Вашого проекту, де інші кажуть це не можливо – ми шукаємо шляхи та
+								пропонуємо рішення. Програмування для нас – це мистецтво, складні завдання – це ті що
+								потрібно виконати зараз, неможливі – на які потрібно більше часу. Адже це робота та
+								бізнес!
 							</p>
 						</li>
 						<li data-slide="slide3">
-							<h2 class="section-h2 wow fadeInUp" data-wow-delay="1s">seo оптимізація</h2>
+							<h2 class="section-h2 wow fadeInUp" data-wow-delay="1s">Web –консалтинг</h2>
 							<p class="description wow fadeInUp" data-wow-delay="1.2s">
-								Ми можемо створити крутий проект для тебе, якщо ти цього хочеш. Найкращі web продукти
-								народжуются тільки у повній самовідданост. Ми готові віддати все наші уміння без
-								залишку. А ти? (переписати)
+								Оптимізуємо всі процеси взаємодії груп розробки, а саме від дизайну до налаштування
+								рекламних кампаній та аналітик. Менеджмент команди OwlWeb націлений на тотальне
+								розуміння нюансів роботи кожного та максимально оптимізує процеси. Ми створюємо проекти
+								для Ваших клієнтів, вони перш за все!
 							</p>
 						</li>
 						<li data-slide="slide4">
-							<h2 class="section-h2 wow fadeInUp" data-wow-delay="1s">Комбо</h2>
+							<h2 class="section-h2 wow fadeInUp" data-wow-delay="1s">SEO оптимізація</h2>
 							<p class="description wow fadeInUp" data-wow-delay="1.2s">
-								Ми можемо створити крутий проект для тебе, якщо ти цього хочеш. Найкращі web продукти
-								народжуются тільки у повній самовідданост. Ми готові віддати все наші уміння без
-								залишку. А ти? (переписати)
+								Там де ніхто не може дати гарантій – ми оперуємо даними та можемо надати прогнози. Адже SEO просування найрезультативніший канал отримання клієнтів. Кожен має бути в Google!
 							</p>
 						</li>
 					</ul>
+					<a href="#" class="want">
+						<span class="wow trfX2" data-wow-delay="2.8s">х</span>
+						<span class="wow trfX2" data-wow-delay="2.6s">о</span>
+						<span class="wow trfX2" data-wow-delay="2.4s">ч</span>
+						<span class="wow trfX2" data-wow-delay="2.2s">у</span>
+						<span class="wow trfX2" data-wow-delay="2s">ц</span>
+						<span class="wow trfX2" data-wow-delay="1.8s">е</span>
+						<ul class="arrow">
+							<li><img src="img/svg/arrow-r-dark.svg" alt="arrow" class="wow trfX2 arrow-1" data-wow-delay="2.8s">
+							</li>
+							<li><img src="img/svg/arrow-r-dark.svg" alt="arrow" class="wow trfX2 arrow-2" data-wow-delay="3s">
+							</li>
+							<li><img src="img/svg/arrow-r-dark.svg" alt="arrow" class="wow trfX2 arrow-3" data-wow-delay="3.2s">
+							</li>
+						</ul>
+					</a>
 				</div>
-				<a href="#" class="want">
-					<span class="wow trfX2" data-wow-delay="2.8s">х</span>
-					<span class="wow trfX2" data-wow-delay="2.6s">о</span>
-					<span class="wow trfX2" data-wow-delay="2.4s">ч</span>
-					<span class="wow trfX2" data-wow-delay="2.2s">у</span>
-					<span class="wow trfX2" data-wow-delay="2s">ц</span>
-					<span class="wow trfX2" data-wow-delay="1.8s">е</span>
-					<ul class="arrow">
-						<li><img src="img/svg/arrow-r.svg" alt="arrow" class="wow trfX2 arrow-1" data-wow-delay="2.8s">
-						</li>
-						<li><img src="img/svg/arrow-r.svg" alt="arrow" class="wow trfX2 arrow-2" data-wow-delay="3s">
-						</li>
-						<li><img src="img/svg/arrow-r.svg" alt="arrow" class="wow trfX2 arrow-3" data-wow-delay="3.2s">
-						</li>
-					</ul>
-				</a>
+			
 			</div>
 		</section>
 		<section id="section4" class="servForDev">
+			<div class="x-mark-wrap">
+				<div class="x-mark2 wow anim1" data-wow-delay="1.6s"></div>
+			</div>
 			<div class="col-left">
 				<div class="img-wrapper">
 					<img src="img/png/dark-1.png" class="wow fadeInUp" data-wow-delay="0.5s" data-wow-offset="100"
@@ -306,56 +279,44 @@
 					<ul class="services__ul">
 						<li data-slide="slide-dark1">
 							<h2 class="section-h2 wow fadeInUp" data-wow-delay="1s">
-								Полсуги для власників та агенств
+								Дизайн
 							</h2>
 							<p class="description wow fadeInUp" data-wow-delay="1.2s">
-								Ми можемо створити крутий проект для тебе, якщо ти цього хочеш. Найкращі web продукти
-								народжуются тільки у повній самовідданост. Ми готові віддати все наші уміння без
-								залишку. А ти? (переписати)
-							</p>
+								Окремо дизайн для Вашого проекту згідно вимог стандартизації. Будьте впевнені, результат буде зручним для подальшої роботи!</p>
 						</li>
 						<li data-slide="slide-dark2">
-							<h2 class="section-h2 wow fadeInUp" data-wow-delay="1s">ux/ui Дизайн</h2>
+							<h2 class="section-h2 wow fadeInUp" data-wow-delay="1s">Back-end</h2>
 							<p class="description wow fadeInUp" data-wow-delay="1.2s">
-								Ми можемо створити крутий проект для тебе, якщо ти цього хочеш. Найкращі web продукти
-								народжуются тільки у повній самовідданост. Ми готові віддати все наші уміння без
-								залишку. А ти? (переписати)
-							</p>
+								Ми працюмо з наданою версткою та програмними напрацюваннями, за наданим технічним завданням. Гарантуємо якість результату та підтримку написаного коду для Вашого проекту.</p>
 						</li>
 						<li data-slide="slide-dark3">
-							<h2 class="section-h2 wow fadeInUp" data-wow-delay="1s">seo оптимізація</h2>
+							<h2 class="section-h2 wow fadeInUp" data-wow-delay="1s">Front-end</h2>
 							<p class="description wow fadeInUp" data-wow-delay="1.2s">
-								Ми можемо створити крутий проект для тебе, якщо ти цього хочеш. Найкращі web продукти
-								народжуются тільки у повній самовідданост. Ми готові віддати все наші уміння без
-								залишку. А ти? (переписати)
-							</p>
+								Маємо досвід роботи у проектах різної важкості: від простих до надпотужних. Ми можемо виконувати front по наданим дизайнам та технічним завданням.</p>
 						</li>
 						<li data-slide="slide-dark4">
 							<h2 class="section-h2 wow fadeInUp" data-wow-delay="1s">Комбо</h2>
-							<p class="description wow fadeInUp" data-wow-delay="1.2s">
-								Ми можемо створити крутий проект для тебе, якщо ти цього хочеш. Найкращі web продукти
-								народжуются тільки у повній самовідданост. Ми готові віддати все наші уміння без
-								залишку. А ти? (переписати)
+							<p class="description wow fadeInUp" data-wow-delay="1.2s">Нам дуже легко комбінувати послуги! Наприклад, розробити для Вас тільки дизайн, чи дизайн та верстку, або ж працювати з наданими дизайнами. Прошу враховувати також, що з вказаними послугами вище Ви отримуєте професійний менеджмент проекту та його ж консалтинг!
 							</p>
 						</li>
 					</ul>
+					<a href="" class="want wantAnim">
+						<span class="wow trfX2" data-wow-delay="2.8s">ц</span>
+						<span class="wow trfX2" data-wow-delay="2.6s">і</span>
+						<span class="wow trfX2" data-wow-delay="2.4s">к</span>
+						<span class="wow trfX2" data-wow-delay="2.2s">а</span>
+						<span class="wow trfX2" data-wow-delay="2s">в</span>
+						<span class="wow trfX2" data-wow-delay="1.8s">о</span>
+						<ul class="arrow">
+							<li><img src="img/svg/arrow-r.svg" alt="arrow" class="wow trfX2 arrow-1" data-wow-delay="2.8s">
+							</li>
+							<li><img src="img/svg/arrow-r.svg" alt="arrow" class="wow trfX2 arrow-2" data-wow-delay="3s">
+							</li>
+							<li><img src="img/svg/arrow-r.svg" alt="arrow" class="wow trfX2 arrow-3" data-wow-delay="3.2s">
+							</li>
+						</ul>
+					</a>
 				</div>
-				<a href="" class="want wantAnim">
-					<span class="wow trfX2" data-wow-delay="2.8s">ц</span>
-					<span class="wow trfX2" data-wow-delay="2.6s">і</span>
-					<span class="wow trfX2" data-wow-delay="2.4s">к</span>
-					<span class="wow trfX2" data-wow-delay="2.2s">а</span>
-					<span class="wow trfX2" data-wow-delay="2s">в</span>
-					<span class="wow trfX2" data-wow-delay="1.8s">о</span>
-					<ul class="arrow">
-						<li><img src="img/svg/arrow-r.svg" alt="arrow" class="wow trfX2 arrow-1" data-wow-delay="2.8s">
-						</li>
-						<li><img src="img/svg/arrow-r.svg" alt="arrow" class="wow trfX2 arrow-2" data-wow-delay="3s">
-						</li>
-						<li><img src="img/svg/arrow-r.svg" alt="arrow" class="wow trfX2 arrow-3" data-wow-delay="3.2s">
-						</li>
-					</ul>
-				</a>
 			</div>
 		</section>
 		<section class="portfol">
@@ -385,15 +346,16 @@
 				works</p>
 		</section>
 		<section class="workTogether">
+			<div class="x-mark-wrap">
+				<div class="x-mark2 wow anim1" data-wow-delay="1.6s"></div>
+			</div>
 			<div class="col-left">
 				<div class="col-inner">
-					<h3 class="section-h3 wow fadeInUp" data-wow-delay="1s">owlweb team</h3>
+					<h3 class="section-h3 wow fadeInUp" data-wow-delay="1s">OWLWEB TEAM</h3>
 					<ul class="workTogether__ul">
 						<li>
-							<h2 class="section-h2 wow fadeInUp" data-wow-delay="1.5s">Давайте працювати разом.</h2>
-							<p class="description wow fadeInUp" data-wow-delay="1.7s">Ми можемо створити крутий проект
-								для тебе, якщо ти цього хочеш. Найкращі web продукти народжуются тільки у повній
-								самовідданост. Ми готові віддати все наші уміння без залишку. А ти? (переписати)</p>
+							<h2 class="section-h2 wow fadeInUp" data-wow-delay="1.5s">Давайте працюваты разом</h2>
+							<p class="description wow fadeInUp" data-wow-delay="1.7s">Ми можемо створити крутий проект для тебе, якщо ти цього хочеш. Найкращі web продукти народжуються тільки у повній самовідданості. Ми готові віддати всі наші уміння без залишку. А Ви?..  А Ви готові отримати найкраще за розумну та аргументовану ціну? </p>
 						</li>
 					</ul>
 					<a href="#" class="link-d wow fadeIn" data-wow-delay="2s">обсудити проект</a>
@@ -461,7 +423,7 @@
 					</ul>
 				</div>
 			</div>
-			<p class="copy" style="">&copy; 2020. OwlWeb Team
+			<p class="copy">&copy; 2020. OwlWeb Team
 				<a href="https://owlweb.com.ua/" target="_blank" rel="nofollow">
 					<svg width="30" height="14" version="1.0" xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 226.000000 141.000000" preserveAspectRatio="xMidYMid meet">
@@ -486,6 +448,66 @@
 			</p>
 		</footer>
 	</div>
+		<!-- блок для моб  -->
+		<div class="mob-footer">
+			<ul>
+				<li><a href="#"><i class="ic-tel"></i> Контакти</a></li>
+				<li><a href="#"><i class="ic-diamond"></i> Послгуи</a></li>
+				<li><a href="#"><i class="ic-case"></i> Портфоліо</a></li>
+			</ul>
+		</div>
+		<div class="menu-block">
+
+		</div>
+		<!-- menu  -->
+		<div class="menu-inner">
+			<ul class="language-mob">
+				<li>
+					<a href="#" class="active">Укр</a>
+				</li>
+				<li>
+					<a href="#">Ру</a>
+				</li>
+			</ul>
+			<ul class="menu-list">
+				<li>
+					<a href="/contact.html" data-text="Контакты">Контакты</a>
+				</li>
+				<li>
+					<a href="/constructor.html" data-text="Конструктор">Конструктор</a>
+				</li>
+				<li>
+					<a href="/category.html" data-text="Категории">Категории</a>
+				</li>
+			</ul>
+			<div class="list">
+				<p class="section-h3">Контакти</p>
+				<ul>
+					<li>
+						<a href="mailto:m.zyubenko@owlweb.com.ua">m.zyubenko@owlweb.com.ua</a>
+					</li>
+					<li>
+						<a href="tel:+38 (096) 929 09 71">+38 (096) 929 09 71</a>
+					</li>
+					<li>
+						<a href="viber://chat?number=380969290971">Viber</a>
+						<a href="tg://resolve?domain=owlweb_energy">Telegram</a>
+					</li>
+				</ul>
+				<p class="section-h3">слідкуй за нами</p>
+				<ul class="social">
+					<li>
+						<a href="#">Facebook</a>
+					</li>
+					<li>
+						<a href=""tg://resolve?domain=owlweb_energy"">Telegram</a>
+					</li>
+					<li>
+						<a href="#">Instagram</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 	<script src="js/main.js"></script>

@@ -8,6 +8,8 @@
 	background: $g-pink
 	overflow-y: hidden
 	position: relative
+	padding: 50px 0px 50px 0px
+	height: auto
 	&__ul
 		position: relative
 		z-index: 101
@@ -15,7 +17,27 @@
 		margin-top: 25px
 		box-shadow: 12px 12px 19.2px rgba(133, 35, 128, 0.31), 0px 0px 4.8px rgba(71, 6, 68, 0.15)
 		li
+			transition: 0.5s
 			padding: 26px 30px 26px 92px
+			.section-h2
+				font-size: 24px
+				text-transform: unset
+				margin-bottom: 12px !important
+				line-height: 110%
+				font-weight: 600
+			.description
+				font-family: Montserrat
+				font-style: normal
+				font-weight: normal
+				font-size: 16px
+				line-height: 140%
+				color: rgba(255, 255, 255, 0.8)
+			&:hover
+				background-color: #C86AA4
+			&:not(:first-of-type)
+					margin-top: 0 !important
+			&:not(:last-of-type)
+				border-bottom: 1px solid #c569a0
 	.arrow
 		position: absolute
 		right: -110px
@@ -24,10 +46,18 @@
 		transform: translateY(-50%)
 	.col-left
 		justify-content: center
+		img
+			width: 110%
+			transition: .5s
+			position: absolute
+			height: 110%
+			top: 0px
+			left: 0px
+			opacity: 0
 	.col-left,.col-right
 		width: 50%
-		height: 100%
-		position: relative
+		height: inherit
+		// position: relative
 		display: -webkit-flex
 		display: -moz-flex
 		display: -ms-flex
@@ -42,14 +72,6 @@
 			position: relative
 			@include l50
 			overflow: hidden
-		img
-			width: 110%
-			transition: .5s
-			position: absolute
-			height: 110%
-			top: 0px
-			left: 0px
-			opacity: 0
 		.bg-mask
 			position: absolute
 			background: $g-pink
@@ -123,24 +145,14 @@
 	overflow: hidden
 .x-mark2
 	width: 100vw !important
-	height: 100vh !important
+	height: inherit !important
 	position: absolute
 	top: 0%
 	z-index: 100
-	// background: url(/img/svg/х-mark-full.svg) center/cover no-repeat
-	mask-image: url(/img/svg/х-mark-full.svg) 
+	mask-image: url(../img/svg/fullX.svg) 
 	background-color: #833882
 	-webkit-mask-size: 100%
-	@include l50
-.x-mark3
-	width: 100vw !important
-	height: 100vh !important
-	position: absolute
-	z-index: 1
-	right: -52%
-	mask-image: url(/img/svg/х-mark-half.svg) 
-	background-color: #833882
-	-webkit-mask-size: 50%
+	right: -20%
 li[data-slide]
 	cursor: pointer
 .services
@@ -152,6 +164,20 @@ li[data-slide]
 			position: absolute
 			top: -40px
 			right: -100px
-			background: url('/img/svg/ic-pink.svg') center/contain no-repeat
+			background: url('../img/svg/ic-pink.svg') center/contain no-repeat
 			width: 99px
 			height: 91px
+.services,.servForDev
+	.want
+		position: relative !important
+		margin-top: 40px
+		bottom: 0px !important
+		left: 0px !important
+		display: inline-flex
+		.arrow
+			transition: .5s
+			top: 55%
+			display: flex
+			img
+				opacity: 1
+				position: static

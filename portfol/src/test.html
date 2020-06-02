@@ -18,16 +18,62 @@
 	</ul> -->
 	
 
-	<div class="sss">
-		ASDASDASDASD
+	<div class="df">
+		<h1>pc</h1>
+		<h2>mp4</h2>
+		<hr>
+		<br>
+			<video src="img/video/Opening-PC.mp4" preload muted playsinline autoplay="autoplay" loop="loop"></video>
+		<hr>
+		<h2>webm</h2>
+		<hr>
+		<br>
+			<video src="img/video/Opening-PC.webm" preload muted playsinline autoplay="autoplay" loop="loop"></video>
+		<hr>
+		<h2>ogv</h2>
+		<hr>
+		<br>
+			<video src="img/video/Opening-PC.ogv" muted playsinline autoplay="autoplay" loop="loop"></video>
+		<hr>
+		</div>
+	<div class="df">
+	<h1>mobile</h1>
+	<h2>mp4</h2>
+	<hr>
+	<br>
+		<video src="img/video/Opening-mob.mp4" muted playsinline autoplay="autoplay" loop="loop"></video>
+	<hr>
+	<h2>webm</h2>
+	<hr>
+	<br>
+		<video src="img/video/Opening-mob.webm" muted playsinline autoplay="autoplay" loop="loop"></video>
+	<hr>
+	<h2>ogv</h2>
+	<hr>
+	<br>
+		<video src="img/video/Opening-mob.ogv" muted playsinline autoplay="autoplay" loop="loop"></video>
+	<hr>
 	</div>
 	<style>
-		.sss{
-			font-size: 150px;
-			color: #fff;
+		video{
+			width: 400px;
+			height: 200px;
 		}
+
 	</style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/swupFunc.js"></script>
+    <script>
+		var str = window.navigator.userAgent;
+		console.log ( '%c%s', 'color: green; font: 1.2rem/1 Tahoma;', str );
+
+		var OSName="Unknown OS";
+		if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
+		if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
+		if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
+
+		console.log('%c%s', 'color: blue; font: 1.2rem/1 Tahoma;', 'Your OS:' +OSName);
+
+
+	</script>
 </body>
 </html>
