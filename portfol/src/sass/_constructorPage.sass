@@ -35,6 +35,7 @@
 		color: #F2F2F2
 		position: relative
 		z-index: 2
+		max-width: 908px
 		h1
 			margin-top: 18px
 			margin-bottom: 36px
@@ -104,7 +105,7 @@
 		background: url(../img/svg/x.svg) center/cover no-repeat
 		width: 100%
 		height: 100%
-.text-block, .text-section, .text-static
+.text-block, .text-section, .text-static, .info-item, .row-img
 	p
 		font-family: Montserrat
 		font-style: normal
@@ -186,6 +187,8 @@
 				top: 10px
 				position: sticky
 				width: 100%
+				p:not(:last-of-type)
+					margin-bottom: 10px
 	&.text-left
 		.container
 			flex-direction: row
@@ -219,7 +222,7 @@
 		flex-wrap: wrap
 		img
 			margin-bottom: 20px
-.text-section
+.text-section, .text-static
 	position: relative
 	&::before
 		position: absolute
@@ -227,14 +230,33 @@
 		top: 0
 		right: 0
 		background: url(../img/svg/x.svg) center/cover no-repeat
-		width: 100%
+		width: 130%
 		height: 100%
+		@media (max-width: 1280px)
+			width: 145%
+		@media (max-width: 1024px)
+			width: 175%
+		@media (max-width: 812px)
+			width: 260%
+		@media (max-width: 576px)
+			width: 350%
 	&.text-left
 		&::before
 			right: -40%
+			@media (max-width: 1024px)
+				right: -100%
+			@media (max-width: 375px)
+				right: -120%
 	&.text-right
 		&::before
-			right: 40%
+			right: 20%
+			@media (max-width: 812px)
+				right: -20%
+			@media (max-width: 576px)
+				right: -100%
+			@media (max-width: 375px)
+				right: -120%
+
 .text-block, .inner
 	p, li
 		font-size: 18px
@@ -372,13 +394,13 @@
 			.mask
 				&::before
 					content: 'Ec'
-		&.op 
+		&.lp 
 			.title
 				&::before
-					content: 'o'
+					content: 'L'
 			.mask
 				&::before
-					content: 'Op'
+					content: 'Lp'
 		&.cs 
 			.title
 				&::before
@@ -497,3 +519,21 @@ video
 	width: 100%
 	height: auto
 	margin-top: 4rem
+.text-section  p a, .text-static .info-item p a, .text-block p a, .row-img p a
+	color: rgba(255, 255, 255, 0.6)
+	position: relative
+	text-decoration: none
+
+.text-section  p a::before, .text-static .info-item p a::before, .text-block p a::before, .row-img p a::before
+	position: absolute
+	content: ''
+	width: 100%
+	height: 1px
+	background-color: rgba(255, 255, 255, 0.6) 
+	bottom: -2px
+	transition: 0.5s
+
+.text-section  p a:hover::before, .text-static .info-item p a:hover::before, .text-block p a:hover::before, .row-img p a:hover::before
+	width: 0%
+.img-section .text-block
+	margin-bottom: 20px

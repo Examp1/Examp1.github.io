@@ -327,6 +327,8 @@
 			.title
 				&::before
 					content: 'w'
+					@media (max-width: 576px)
+						left: -30px
 			.mask
 				&::before
 					content: 'W'
@@ -338,17 +340,21 @@
 			.mask
 				&::before
 					content: 'Ec'
-		&.op 
+		&.lp 
 			.title
 				&::before
-					content: 'o'
+					content: 'Lp'
+					@media (max-width: 576px)
+						left: -35px
 			.mask
 				&::before
-					content: 'Op'
+					content: 'Lp'
 		&.cs 
 			.title
 				&::before
 					content: 'c'
+					@media (max-width: 576px)
+						left: -30px
 			.mask
 				&::before
 					content: 'Cs'

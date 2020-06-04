@@ -25,6 +25,12 @@
 		&-body
 			height: 550px
 @media (max-width: 1024px)
+	.slider .slide:hover
+		height: 100% !important
+		transform: translateY(0%) !important
+		background-color: darken($c-bg-black, 5) !important
+		.inner-a
+			background-color: darken($c-bg-black, 5) !important	
 	.catMain .bottom
 		flex-direction: column	
 		height: auto
@@ -60,15 +66,12 @@
 		position: relative
 	.catMain video
 		display: none
-@media (max-width: 700px)
-	.case-wrapper	
-		justify-content: center
 @media (min-width: 576px)
 	.case
 		&-item
 			&:nth-child(odd)
 				transform: translateY(-100px) !important
-@media (max-width: 576px)
+@media (max-width: 700px)
 	.catMain .anim-text-move:first-of-type
 		top: 0%
 	.catMain .anim-text-move:last-of-type
@@ -98,6 +101,20 @@
 			margin-bottom: 50px
 			a
 				margin-bottom: 10px
+@media (max-width: 576px)
+	.case 
+		.filter
+			justify-content: flex-start
+			margin-top: 20px
+			margin-bottom: 35px
+			a
+				font-size: 11px
+				padding: 5px 5px 5px 5px
+				margin-left: 10px
+		.title
+			left: 40px
+			&::before
+				font-size: 80px
 @media (max-width: 425px)
 	.case-bg
 		height: 270px
@@ -130,3 +147,16 @@
 			margin-bottom: 50px
 			a
 				margin-bottom: 10px
+@media (max-width: 375px)
+	.case 
+		.filter
+			a
+				margin-left: 15px
+	.case-text 
+		.tegs
+			// flex-direction: column
+			flex-wrap: wrap
+			li
+				margin-left: 10px
+				margin-bottom: 5px
+				

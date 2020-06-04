@@ -1,9 +1,6 @@
 .servForDev
 	flex-direction: row-reverse
 	background: $c-bg-black
-	.services__ul li
-		padding-left: 30px
-		padding-right: 92px
 	.hover-el::before
 		right: 40px
 		left: unset
@@ -75,19 +72,27 @@
 		.arrow
 			transform: translateY(-50%) translateX(10px) !important
 .servForDev
+	@media (max-width: 425px)
+		padding-top: 100px !important
 	.section-h3
 		padding-left: 90px
+		@media (max-width: 425px)
+			padding-left: 0px
 	.h3-img
 		position: relative
 		display: inline
 		padding-left: 90px
 		width: 100%
 		display: inline-block
+		@media (max-width: 425px)
+			padding-left: 0px
 		&::before
 			content: ''
 			position: absolute
-			top: -40px
+			top: -20px
 			left: -10px
 			background: url('/img/svg/ic-black.svg') center/contain no-repeat
 			width: 99px
 			height: 91px
+			@media (max-width: 425px)
+				top: -105px

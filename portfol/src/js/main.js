@@ -18,13 +18,14 @@ $(window).on('load', function () {
   // console.log( document.cookie );
   cookies();
 
-  function OffScroll () {
+  function OffScroll() {
     var winScrollTop = $(window).scrollTop();
-    $(window).bind('scroll',function () {
-        $(window).scrollTop(winScrollTop);
+    $(window).bind('scroll', function () {
+      $(window).scrollTop(winScrollTop);
     });
   }
   OffScroll();
+
   function fadePrivacy() {
     $('.privacy').fadeOut().remove();
     console.log('privacy fade');
@@ -38,14 +39,14 @@ $(window).on('load', function () {
     $(window).unbind('scroll');
   }
 
-    setTimeout(fadePreload, 1000);
+  setTimeout(fadePreload, 1000);
   var $page = $('html, body');
-  $('.up').click(function(e) {
-      e.preventDefault();
-      $page.animate({
-          scrollTop: $($.attr(this, 'href')).offset().top
-      }, 400);
-      return false;
+  $('.up').click(function (e) {
+    e.preventDefault();
+    $page.animate({
+      scrollTop: $($.attr(this, 'href')).offset().top
+    }, 400);
+    return false;
   });
 
   let menuBtn = $('.menu'),
@@ -103,16 +104,12 @@ $(window).on('load', function () {
   });
 
   wow = new WOW({
-    // callback: afterReveal,
-    // mobile: false,
-      callback:     function(box) {
+    callback: function (box) {
       console.log("WOW: animating <" + box.tagName.toLowerCase() + ">");
-  }
+    }
   });
   wow.init();
   // os   
-  var str = window.navigator.userAgent;
-  console.log('%c%s', 'color: green; font: 1.2rem/1 Tahoma;', str);
 
   var OSName = "Unknown OS";
   if (navigator.appVersion.indexOf("Win") != -1) {
@@ -124,11 +121,27 @@ $(window).on('load', function () {
   if (navigator.appVersion.indexOf("Linux") != -1) {
     OSName = "Linux";
   }
-  console.log('%c%s', 'color: blue; font: 1.2rem/1 Tahoma;', 'Your OS:' + OSName);
+  console.log('%c%s', 'color: blue; font: 1.2rem/1 Tahoma;', 'Your OS: ' + OSName);
   // language
-  $('.language-mob li a, .language li a').on('click', function(e) {
+  $('.language-mob li a, .language li a').on('click', function (e) {
     e.preventDefault();
     $('.language-mob li a, .language li a').removeClass('active');
     $(this).addClass('active');
+  });
+
+  // native js
+  'use strict';
+
+  const firstScreen = document.querySelector('#section1'),
+    up = document.querySelector('.up');
+
+  console.log(firstScreen.offsetHeight);
+
+  window.addEventListener('scroll', (e) => {
+    if (document.documentElement.scrollTop > firstScreen.offsetHeight) {
+      up.style.display = 'flex';
+    } else {
+      up.style.display = 'none';
+    }
   });
 });

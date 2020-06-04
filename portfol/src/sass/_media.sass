@@ -16,6 +16,59 @@
 		.want
 			position: relative !important
 @media (max-width: 1024px)
+	.menu-inner
+		flex-wrap: wrap
+	.language-mob
+		transition: 1.5s
+		opacity: 0
+		display: flex
+		border-radius: 5px
+		width: 100%
+		justify-content: center
+		background: rgba(169, 166, 186, 0.1)
+		li
+			width: 100%
+			text-align: left
+			&:not(:last-of-type)
+				margin-right: 30px
+				position: relative
+				text-align: right
+				&::before
+					content: ''
+					background-color: #D5D3E1
+					width: 1px
+					height: 70%
+					@include t50
+					right: -15px
+					position: absolute
+			a
+				width: 100%
+				display: inline-block
+				padding: 20px
+				font-family: Roboto Condensed
+				font-style: normal
+				font-weight: normal
+				font-size: 12px !important
+				line-height: 14px
+				letter-spacing: 0.135em
+				text-transform: uppercase
+				color: rgba(213, 211, 225, 0.5);
+				text-decoration: none
+				&.active
+					color: #D5D3E1
+	.head
+		padding-left: 15px !important
+		.text
+			line-height: 25px 
+	.head .language
+		display: none
+	.head
+		background-color: $c-bg-black
+		top: 0
+		margin-top: 0
+		padding: 4px 10px
+	.head .l::before
+		display: none
 	.services .col-left
 		img
 			object-fit: contain
@@ -79,46 +132,6 @@
 				letter-spacing: -0.03em
 				text-decoration: none
 				color: rgba(255, 255, 255, 0.7)
-	.language-mob
-		transition: 1.5s
-		opacity: 0
-		display: flex
-		border-radius: 5px
-		width: 100%
-		justify-content: center
-		background: rgba(169, 166, 186, 0.1)
-		li
-			width: 100%
-			text-align: left
-			&:not(:last-of-type)
-				margin-right: 30px
-				position: relative
-				text-align: right
-				&::before
-					content: ''
-					background-color: #D5D3E1
-					width: 1px
-					height: 70%
-					@include t50
-					right: -15px
-					position: absolute
-			a
-				width: 100%
-				display: inline-block
-				padding: 20px
-				font-family: Roboto Condensed
-				font-style: normal
-				font-weight: normal
-				font-size: 12px !important
-				line-height: 14px
-				letter-spacing: 0.135em
-				text-transform: uppercase
-				color: rgba(213, 211, 225, 0.5);
-				text-decoration: none
-				&.active
-					color: #D5D3E1
-	.head .language
-		display: none
 	.services .want, .servForDev .want
 		position: relative !important
 		bottom: 0
@@ -181,8 +194,6 @@
 		padding-top: 90px
 		padding-bottom: 90px
 		flex-wrap: wrap
-		.arrow
-			right: 80px
 		.img-inner
 			position: static
 		.want
@@ -223,14 +234,15 @@
 	.transparent-text
 		display: none
 @media (max-width: 576px)
+	.menu-inner .menu-list
+		margin-bottom: 30px
 	.services, .servForDev
 		.want 
 			display: flex
 			width: 100%
-			justify-content: center
 			.arrow
-				top: 130%
-				right: 40%
+				// top: 130%
+				right: 40px
 				li
 					margin-top: 20px
 					width: 35px
@@ -256,13 +268,6 @@
 		display: none
 	#mob
 		display: block
-	.head
-		background-color: $c-bg-black
-		top: 0
-		margin-top: 0
-		padding: 4px 10px
-	.head .l::before
-		display: none
 	.want 
 		left: 10px !important
 		span
@@ -285,6 +290,13 @@
 		white-space: unset
 	.servForDev__ul
 		max-width: 90% !important
-	.servForDev .arrow
-		right: 40px
+	.servForDev
+		.arrow
+			right: 80px
+	.services
+		.arrow
+			right: 0px !important
+	.services, .servForDev
+		.want
+			margin-top: 40px !important
 

@@ -132,11 +132,6 @@ $('.up').click(function(e) {
     nextArrow: '<div class="sprite-next"></div>', // Кастомная стрелка "далее"
     prevArrow: '<div class="sprite-prev"></div>' // Кастомная стрелка "назад"
   });
-  //    wow = new WOW(
-  //   {
-  //   // mobile: false,
-  // });
-  // wow.init();
    AOS.init({
     anchorPlacement: 'top-bottom',
     offset: 120
@@ -178,6 +173,39 @@ $('.up').click(function(e) {
         e.preventDefault();
         $('.language-mob li a, .language li a').removeClass('active');
         $(this).addClass('active');
-      }); 
+      });
+      
+      //  native js
+      'use strict';
+
+      const modaTrigger = document.querySelector('.modal-video'),
+            modal = document.querySelector('.modal__video');
+
+      // console.log(modaTrigger);
+
+      function openModal() {
+          modal.classList.add('show');
+          document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        modal.classList.remove('show');
+        document.body.style.overflow = '';
+      }
+
+      modaTrigger.addEventListener('click', (e) => {
+        openModal();
+      });
+
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal){
+          closeModal();
+        }
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.code === 'Escape' && modal.classList.contains('show')){
+          closeModal();
+        }
+      });
 });
 

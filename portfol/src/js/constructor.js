@@ -91,7 +91,7 @@ $('.up').click(function(e) {
   //   // block.style.top = -400 + value + "px"
   //   // block2.style.top = -500 + value + "px"
   // });
-  let imgW = $('.img-wrapper img'),
+  let imgW = $('.img-wrapper').children('img', 'video'),
       rowImg = $('.row-img');
       
  function offsetBottom () {
@@ -177,5 +177,7 @@ $('.up').click(function(e) {
     $(window).resize(function () { 
       iframeFhd();
      });
+
+    //  native js
 });
 

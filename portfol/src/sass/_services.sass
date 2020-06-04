@@ -18,7 +18,7 @@
 		box-shadow: 12px 12px 19.2px rgba(133, 35, 128, 0.31), 0px 0px 4.8px rgba(71, 6, 68, 0.15)
 		li
 			transition: 0.5s
-			padding: 26px 30px 26px 92px
+			padding: 26px 30px 26px 30px
 			.section-h2
 				font-size: 24px
 				text-transform: unset
@@ -167,7 +167,18 @@ li[data-slide]
 			background: url('../img/svg/ic-pink.svg') center/contain no-repeat
 			width: 99px
 			height: 91px
+			@media (max-width: 1024px)
+				top: -35px
+				right: -210px
+			@media (max-width: 768px)
+				right: -150px
+			@media (max-width: 425px)
+				top: -85px
+				right: -190px
 .services,.servForDev
+	justify-content: center
+	.col-left, .col-right
+		width: 45%
 	.want
 		position: relative !important
 		margin-top: 40px
@@ -181,3 +192,5 @@ li[data-slide]
 			img
 				opacity: 1
 				position: static
+			li
+				margin-top: 0 !important
