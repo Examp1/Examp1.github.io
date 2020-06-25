@@ -49,6 +49,14 @@ $(window).on('load', function () {
     return false;
   });
 
+  $('[href="#workT"]').click(function (e) {
+    e.preventDefault();
+    $page.animate({
+      scrollTop: $($.attr(this, 'href')).offset().top
+    }, 400);
+    return false;
+  });
+
   let menuBtn = $('.menu'),
     menuCircle = $('.menu-block'),
     menuList = $('.menu-inner');
@@ -121,16 +129,19 @@ $(window).on('load', function () {
   if (navigator.appVersion.indexOf("Linux") != -1) {
     OSName = "Linux";
   }
+
   console.log('%c%s', 'color: blue; font: 1.2rem/1 Tahoma;', 'Your OS: ' + OSName);
+
   // language
   $('.language-mob li a, .language li a').on('click', function (e) {
-    e.preventDefault();
     $('.language-mob li a, .language li a').removeClass('active');
     $(this).addClass('active');
   });
 
   // native js
   'use strict';
+
+
 
   const firstScreen = document.querySelector('#section1'),
     up = document.querySelector('.up');

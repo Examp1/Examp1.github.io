@@ -26,6 +26,8 @@
 	position: relative
 	overflow: visible
 	min-height: 100vh
+	.link-case
+		margin: unset
 	.text-block
 		font-family: Montserrat
 		font-style: normal
@@ -68,16 +70,15 @@
 			margin-top: 21px
 			margin-bottom: 17px
 			li
+				font-family: Montserrat
+				font-style: normal
+				font-weight: 500
+				font-size: 16px
+				line-height: 120%
+				color: #FFFFFF
+				text-decoration: none
 				&:not(:last-of-type)
 					margin-right: 20px
-				a
-					font-family: Montserrat
-					font-style: normal
-					font-weight: 500
-					font-size: 16px
-					line-height: 120%
-					color: #FFFFFF
-					text-decoration: none
 		.title
 			font-family: Roboto Condensed
 			font-style: normal
@@ -151,10 +152,9 @@
 				line-height: 120%
 				color: #F2F2F2
 				margin-bottom: $space-s
-.img-wrapper
-	img
-		&:last-of-type
-			margin-bottom: 0 !important
+// .img-wrapper
+// 	&:last-child
+// 		margin-bottom: 0 !important
 .text-and-media
 	background: $c-bg-black !important
 	overflow-y: unset
@@ -220,8 +220,6 @@
 		display: flex
 		justify-content: space-between
 		flex-wrap: wrap
-		img
-			margin-bottom: 20px
 .text-section, .text-static
 	position: relative
 	&::before
@@ -383,6 +381,8 @@
 			.title
 				&::before
 					content: 'w'
+					@media (max-width: 576px)
+						left: -30px
 			.mask
 				&::before
 					content: 'W'
@@ -397,7 +397,9 @@
 		&.lp 
 			.title
 				&::before
-					content: 'L'
+					content: 'Lp'
+					@media (max-width: 576px)
+						left: -35px
 			.mask
 				&::before
 					content: 'Lp'
@@ -405,12 +407,15 @@
 			.title
 				&::before
 					content: 'c'
+					@media (max-width: 576px)
+						left: -30px
 			.mask
 				&::before
 					content: 'Cs'
 	&-bg
 		width: 100%
 		height: 443px
+		overflow: hidden
 		position: relative
 		&::before
 			width: 100%
@@ -470,6 +475,7 @@
 				font-size: 100px
 	&-text
 		color: #fff
+		font-family: Montserrat;
 		h3
 			font-family: Montserrat
 			font-style: normal
@@ -518,7 +524,7 @@ iframe
 video
 	width: 100%
 	height: auto
-	margin-top: 4rem
+	// margin-top: 4rem
 .text-section  p a, .text-static .info-item p a, .text-block p a, .row-img p a
 	color: rgba(255, 255, 255, 0.6)
 	position: relative
@@ -536,4 +542,7 @@ video
 .text-section  p a:hover::before, .text-static .info-item p a:hover::before, .text-block p a:hover::before, .row-img p a:hover::before
 	width: 0%
 .img-section .text-block
-	margin-bottom: 20px
+	margin-bottom: 40px
+.row-img
+	.img-wrapp
+		margin-top: 40px	

@@ -100,10 +100,11 @@ $('.up').click(function(e) {
   //   // block2.style.top = -500 + value + "px"
   // });
   $('.slider').slick({
-    infinite: false,
+    infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
     asNavFor: '.slider2',
+    swipeToSlide: true,
     dots: false,
     responsive: [
       {
@@ -121,7 +122,7 @@ $('.up').click(function(e) {
     {
       breakpoint: 576,
       settings: {
-        slidesToShow: 1
+        slidesToShow: 2
       }
     }
   ]
@@ -170,7 +171,6 @@ $('.up').click(function(e) {
       });
       $('.slider2').find('.slick-list').remove();
       $('.language-mob li a, .language li a').on('click', function(e) {
-        e.preventDefault();
         $('.language-mob li a, .language li a').removeClass('active');
         $(this).addClass('active');
       });
@@ -179,7 +179,8 @@ $('.up').click(function(e) {
       'use strict';
 
       const modaTrigger = document.querySelector('.modal-video'),
-            modal = document.querySelector('.modal__video');
+            modal = document.querySelector('.modal__video'),
+            iframe = modal.querySelector('.modal__content iframe');
 
       // console.log(modaTrigger);
 
@@ -193,6 +194,13 @@ $('.up').click(function(e) {
         document.body.style.overflow = '';
       }
 
+      function stopVideo() {
+        let iframeSrc = iframe.src;
+        const temp = iframeSrc.slice();
+        iframe.src = `${iframeSrc}&enablejsapi=1`;
+        iframe.src = temp;
+      }
+
       modaTrigger.addEventListener('click', (e) => {
         openModal();
       });
@@ -200,12 +208,23 @@ $('.up').click(function(e) {
       modal.addEventListener('click', (e) => {
         if (e.target === modal){
           closeModal();
+          stopVideo();
         }
       });
       document.addEventListener('keydown', (e) => {
         if (e.code === 'Escape' && modal.classList.contains('show')){
           closeModal();
+          stopVideo();
         }
       });
+      // if ($('body').hasClass('filtered')){
+      //   $('[href="#workT"]').click(function (e) {
+      //     e.preventDefault();
+      //     $page.animate({
+      //       scrollTop: $($.attr(this, 'href')).offset().top
+      //     }, 400);
+      //     return false;
+      //   });
+      // }
 });
 

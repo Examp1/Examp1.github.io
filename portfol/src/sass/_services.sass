@@ -194,3 +194,23 @@ li[data-slide]
 				position: static
 			li
 				margin-top: 0 !important
+@media (max-width: 768px)
+	.services__ul li
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			right: 20px !important 
+			width: 20px
+			top: 30px
+			height: 2px
+			background-color: #fff
+		&::after
+			content: ''
+			position: absolute
+			transition: .5s
+			right: 29px !important 
+			top: 20px
+			width: 2px
+			height: 20px
+			background-color: #fff

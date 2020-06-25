@@ -25,6 +25,9 @@
 		display: flex
 		align-items: center	
 		justify-content: space-between
+		.question
+			opacity: 0
+			transition: 1.5s
 		.menu-list
 			position: relative
 			opacity: 0
@@ -121,7 +124,7 @@
 .opened
 	opacity: 1
 	z-index: 998
-	.social, .menu-list, .list , .list ul, .language-mob
+	.social, .menu-list, .list , .list ul, .language-mob, .question
 		list-style-type: none
 		opacity: 1 !important
 .hover-li-a
@@ -259,12 +262,12 @@
 			.accordion-btn
 				font-family: Montserrat
 				font-style: normal
-				font-weight: 300
-				font-size: 13px
+				font-weight: 500
+				font-size: 16px
 				line-height: 16px
 				color: #F2F2F2
 				position: relative
-				padding: 22px 22px 22px 45px
+				padding: 22px 22px 22px 25px
 				width: 100%
 				display: inline-block 
 				border-top: 1px solid rgba(255, 255, 255, 0.05)
@@ -401,3 +404,90 @@
 	align-items: center
 .show
 	display: flex
+// .active-acc .description
+// 	display: block !important
+// 	opacity: 1 !important
+// 	visibility: visible !important
+// .active-acc::after
+// 	height: 0 !important
+.menu-inner
+	.question
+		display: flex
+		margin-top: 33px
+		margin-bottom: 46px
+		@media (max-width: 768px)
+			flex-direction: column
+		img
+			width: 129px
+			height: 129px
+			border-radius: 50%
+		.col-l
+			width: 129px
+			margin-right: 33px
+			@media (max-width: 768px)
+				height: 129px
+		.col-r
+			.title
+				font-family: Montserrat
+				font-style: normal
+				font-weight: 500
+				font-size: 30px
+				line-height: 160%
+				color: #FFFFFF
+			.desc
+				font-family: Montserrat
+				font-style: normal
+				font-weight: normal
+				font-size: 18px
+				line-height: 160%
+				color: #FFFFFF
+			.comment
+				font-family: Montserrat
+				font-style: normal
+				font-weight: 500
+				font-size: 20px
+				line-height: 140%
+				margin-top: 33px
+				color: #FFFFFF
+				padding: 15px
+				background-color: rgba(#fff, .2)
+				border-radius: 0px 16px 16px 16px
+				position: relative
+				&::before
+					position: absolute
+					content: ''
+					height: 29px
+					width: 18px
+					background: url(../img/png/triangle.png) center/cover no-repeat
+					top: 0
+					left: -18px
+				&:not(:last-of-type)
+					margin-bottom: 10px
+			.social
+				display: flex
+				// justify-content: center
+				width: 100%
+				li
+					width: 51px
+					height: 51px
+					&:not(:last-of-type)
+						margin-right: 20px
+					a
+						width: 100%
+						height: 100%
+						display: block
+						img
+							width: 51px
+							height: 51px
+.menu-inner .comment
+	margin-bottom: 10px
+.menu-inner .question
+	flex-direction: row
+.link-case
+	max-width: 650px
+	width: 100%
+	display: flex
+	justify-content: center
+	margin: 0 auto
+	span
+		transition: 0.5s

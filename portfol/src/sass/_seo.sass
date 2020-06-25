@@ -1,0 +1,77 @@
+.seoText
+    display: flex
+    padding-top: 70px
+    max-width: 1400px
+    margin: 0px auto
+    flex-direction: column
+    align-items: center
+    min-height: unset
+    h1
+        display: block
+        font-family: Montserrat
+        font-style: normal
+        font-weight: 500
+        font-size: 28px
+        line-height: 120%
+        text-align: center
+        color: #E0E0E0
+        margin-bottom: 1.5rem
+.seoText__item
+    width: calc(33% - 10px)
+    @media (max-width: 1024px)
+        width: 95%
+        margin: 10px auto
+.seoText__item p
+    font-family: Montserrat
+    font-style: normal
+    font-weight: normal
+    font-size: 15px
+    line-height: 160%
+    color: #A3A3A7
+    margin-bottom: 1rem
+.seoText__item p b
+    font-weight: 700
+    color: #fff
+.seoText__item ul, .seoText__item ol
+    padding-left: 40px
+    list-style: none
+    li
+        margin-bottom: 0.5rem
+.seoText__item ol
+    list-style: decimal-leading-zero
+    li
+        font-family: Montserrat
+        font-style: normal
+        font-weight: normal
+        font-size: 15px
+        line-height: 160%
+        color: #A3A3A7
+.seoText__item ul li
+    position: relative
+    font-family: Montserrat
+    font-style: normal
+    font-weight: normal
+    font-size: 15px
+    line-height: 160%
+    color: #A3A3A7
+    &::before
+        content: ''     
+        position: absolute      
+        top: 5px        
+        left: -40px     
+        width: 20px     
+        height: 20px
+        background: url(../img/svg/mark.svg) center/contain no-repeat
+.seoWrapper
+    display: flex
+    justify-content: space-between
+    @media (max-width: 1024px)
+        flex-direction: column
+    h2, h3
+        font-family: Montserrat
+        font-style: normal
+        font-weight: 500
+        font-size: 22px
+        line-height: 120%
+        color: #E0E0E0
+        margin-bottom: 0.5rem

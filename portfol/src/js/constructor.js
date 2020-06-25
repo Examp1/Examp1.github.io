@@ -91,9 +91,29 @@ $('.up').click(function(e) {
   //   // block.style.top = -400 + value + "px"
   //   // block2.style.top = -500 + value + "px"
   // });
-  let imgW = $('.img-wrapper').children('img', 'video'),
-      rowImg = $('.row-img');
+  let imgW = $('.img-wrapper').children('*'),
+      imgB = $('.img-block').children('*'),
+      rowImg = $('.row-img .container .img-wrapp').children('*');
+
       
+  if (rowImg.length == 1){
+    rowImg.css('width', '100%');
+  } else if (rowImg.length == 2) {
+    rowImg.css('width', 'calc(50% - 10px)');
+  } else if (rowImg.length >= 3) {
+    rowImg.css('width', 'calc(33% - 10px)');
+  }
+  function width576() {
+    if (rowImg.length >= 3) {
+      rowImg.css('width', 'calc(50% - 10px)');
+      rowImg.css('margin-bottom', '20px');
+    }
+  }
+  if (screen.width < 576){
+    width576();
+  }
+    
+  console.log(imgW);
  function offsetBottom () {
   if ($(imgW).length > 1) {
     $(imgW).css('margin-bottom', '4rem');
@@ -103,20 +123,14 @@ $('.up').click(function(e) {
      $(imgW).css('margin-bottom', '2rem');
    }
   }
+  if ($(imgB).length > 1) {
+    $(imgB).css('margin-bottom', '40px');
+  }
  }
  offsetBottom();
- 
-   console.log($('.row-img').find('img').length);
-   $(rowImg).each(function(index, el) {
-     if ($(el).find('img').length == 1) {
-        $(el).find('img').css('width', '100%');
-     }else if ($(el).find('img').length == 2){
-        $(el).find('img').css('width', 'calc(50% - 10px)');
-     }else{
-       $(this).addClass('img3');
-       $(el).find('img').css('width', 'calc(33% - 10px)');
-     }
-   });
+ console.log(rowImg);
+
+   
    console.log('h1: ' + $('h1').text().length);
    let strText = $('h1').text().length,
        strH1   = $('h1');
@@ -154,6 +168,7 @@ $('.up').click(function(e) {
    $(window).resize(function () { 
     fontSize();
     offsetBottom();
+    width576();
    });
   function randomInteger(min,max){
     let rand = min - 0.5 + Math.random() * (max - min + 1);
@@ -164,7 +179,6 @@ $('.up').click(function(e) {
       $(el).find('.case-bg').addClass('bg' + randomInteger(1,4));
     });
     $('.language-mob li a, .language li a').on('click', function(e) {
-      e.preventDefault();
       $('.language-mob li a, .language li a').removeClass('active');
       $(this).addClass('active');
     }); 
